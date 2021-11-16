@@ -39,12 +39,12 @@ Surface plane
 https://www.yoasobi-music.jp/profile
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
+Home page
 <!-- <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina"> -->
 ![image](https://user-images.githubusercontent.com/94317411/142030543-41a16000-3d77-4bba-8280-414254d748a3.png)
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
+SONGS / NOVELS
 <!-- <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina"> -->
 ![image](https://user-images.githubusercontent.com/94317411/142031267-b04d769a-085a-4ae6-9134-e427c373bd7a.png)
 
