@@ -46,7 +46,7 @@ hier de naam van de pagina
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
 <!-- <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina"> -->
-![image](https://user-images.githubusercontent.com/94317411/142031182-233d15a6-019e-4e0b-845d-c85a3f2086c9.png)
+![image](https://user-images.githubusercontent.com/94317411/142031267-b04d769a-085a-4ae6-9134-e427c373bd7a.png)
 
  
 </details>
