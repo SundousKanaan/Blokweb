@@ -68,7 +68,8 @@ SONGS / NOVELS
 <img src="readme-images/home-page-anatome.png" width="375px" alt="breakdown van de hele pagina">
  
 ### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<!-- <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel"> -->
+ <img src="readme-images/menu-anatome.png" width="375px" alt="breakdown van de hele pagina">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
