@@ -60,7 +60,7 @@ SONGS / NOVELS
 
 ## Breakdownschets (week 1)
 
-<details open>
+<details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
@@ -82,7 +82,7 @@ SONGS / NOVELS
 
 ## Voortgang 1 (week 2)
 
-<details>
+<details open>
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
