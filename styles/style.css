@@ -1,16 +1,3 @@
-
-
-
-    /* =================================================*/
-    /* Hoe kan je dit document lezen:
-    - het volgorde is het zelfde van het html document
-    - elke elemen:
-      - stylen
-      - position */
-    /* =================================================*/
-
-
-
         /* ========================*/
         /*= met custom properties =*/
         /* ========================*/
@@ -23,8 +10,12 @@
   --background-footer-color: #282828;
 
    /* fonts  */
-   /* --hoofd-font: 'Black Han Sans', sans-serif; */
-   --hoofd-font:"Roboto Condensed",sans-serif;
+   /* --hoofd-font:"Roboto Condensed",sans-serif; */
+   --hoofd-font:'Black Han Sans', sans-serif;
+
+   /* menu button colors  */
+   --menu-button-color: rgba(255, 255, 255, 0.564);
+
    /* --secondary-font:; */
 }
 
@@ -35,87 +26,339 @@
         /* ========================*/
         /*=  Algemeen commanden   =*/
         /* ========================*/
+html, body {
+  padding: 0;
+  margin: 0;
+  /* width: 100vw; */
+  height: 100vh;
+  position: relative;
+}
+
 
 body{
-  width: 100%;
-  margin: 0;
   background-color: var(--background-color);
   color: var(--font-color);
 }
 
-  /* header  */
+main{
+  position: relative;
+  z-index: 0;
+}
+
+body>nav{
+  position: absolute;
+  right: 10em;
+
+
+  margin: 0;
+  padding: 0;
+
+}
+
+body>nav a{
+  text-decoration: none;
+  font-size: 3em;
+  color: var(--footer-color);
+  /* background-color: pink; */
+  margin: 0;
+  width: 1.2em;
+  height: 1.2em;
+
+  border: solid 2px var(--footer-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  /* opacity: 0; */
+  position: fixed;
+  right: 6em;
+  bottom: 3em;
+
+  width: 1.2em;
+  height: 1.2em;
+  padding: 0;
+  margin: 0;
+  border: solid .01em var(--footer-color);
+
+  background-color: var(--background-color);
+  outline: none;
+
+  font-size: 1.5em;
+  color: var(--footer-color);
+
+}
+
+/* button.add{
+  opacity: 1;
+} */
+
+        /* ========================*/
+        /*=    header commanden   =*/
+        /* ========================*/
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 header h1{
   margin: 0;
 
   position: fixed;
   left: 2%;
-  top: .6em;
-  z-index: 100;
+  top: 4%;
+  z-index: 1;
 }
 
-header h1 a{
-  font-family: var(--hoofd-font);
-  font-size: 1em;
-  font-weight: 900 ;
-
-  text-transform: uppercase;
-  color: var(--accent-color);
-  text-decoration: none;
+header h1 a img{
+  width: 35%;
 }
 
-header p{
-  font-size: 1.7em;
-  line-height: .5em;
-  position: fixed;
-  top: .6em;
-  right: 3%;
+    /* image cover  */
+header img{
+  width: 66%;
   margin: 0;
-  z-index: 100;
 }
 
-  /* main  */
 
-main{
-  font-family: var(--hoofd-font);
+
+
+
+
+        /* ==========================*/
+        /*=   navigatie commanden   =*/
+        /* ==========================*/
+
+    /* navigatie knop*/
+header>div:first-of-type{
+  border: none;
+  background-color: none;
+
+  position: fixed;
+  right: 2%;
+  top: 4%;
+  height: 1.5em;
 
   display: flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  z-index: 200;
 }
 
-  /* for all sections */
-main section{
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
+header>div:first-of-type span:nth-of-type(1),
+header>div:first-of-type span:nth-of-type(2),
+header>div:first-of-type span:nth-of-type(3){
+  background-color: var(--menu-button-color);
+  width: 2.2em;
+  height: .05em;
+}
+
+    /* navigatie */
+
+header nav{
+  padding: 70px 15% ;
+  margin: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  margin: 0;
+
+  background-image: url(../images/logo_yoasobi_menu.png);
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+  background-size: contain;
+
+  transform: translatex(-100%);
+  transition:0.5s; 
+}
+
+header nav>p{
+  font-family: var(--hoofd-font);
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+
+  left: 18%;
+}
+
+header nav ul{
+  list-style: none;
+}
+
+.toonMenu{
+  transform: translatex(0%);
+}
+
+
+    /* list 1 */
+
+header nav ul:first-of-type{
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header nav ul:first-of-type li a{
+  font-family: var(--hoofd-font);
+  font-size: 4vh;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+
+  color: var(--font-color);
+}
+
+    /* list 2 */
+
+header nav ul:last-of-type{
+  width: 18em;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+header nav ul:last-of-type li img{
+  width: 3em;
+  margin: 0;
+}
+
+header nav ul li a:hover{
+  color:var(--accent-color);
+}
+
+
+
+
+
+
+        /* =============================*/
+        /*=  header section commands   =*/
+        /* =============================*/
+header section{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 66%;
   gap: 1.5em;
-
-
+  padding-top: 3.5em;
 }
 
-main section h3{
-  font-size: 2em;
-  font-weight: 300;
-
+header section h2{
+  font-family: var(--hoofd-font);
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 2.1em;
+  letter-spacing: 0.2em;
+  transform: scale(1, 1.5);
   margin: 0;
-  grid-column-start: 2;
 }
 
-main section p{
-  margin: 0;
-  font-size: 1em;
-  letter-spacing: 1px;
-  line-height: 1.75;
+
+header section div{
+  height: 2em;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
 }
 
-  /* footer  */
+    /* horizontal lines */
+header section div span:nth-of-type(1),
+header section div span:nth-of-type(2),
+header section div span:nth-of-type(3),
+header section div span:nth-of-type(4),
+header section div span:nth-of-type(5){
+  background-color: var(--font-color);
+  height: .01em;
+}
+
+header section div span:nth-of-type(1){
+  width: 98%;
+}
+
+header section div span:nth-of-type(2){
+  width: 95%;
+}
+
+header section div span:nth-of-type(3){
+  width: 100%;
+}
+
+header section div span:nth-of-type(4){
+  width: 96%;
+  height: .09em;
+}
+
+header section div span:nth-of-type(5){
+  width: 98%;
+  height: .09em;
+}
+
+
+    /* vertical lines */
+header section div span:nth-of-type(6),
+header section div span:nth-of-type(7),
+header section div span:nth-of-type(8),
+header section div span:nth-of-type(9),
+header section div span:nth-of-type(10){
+  position: absolute;
+  background-color: var(--font-color);
+  height: 2em;
+  width: .05em;
+}
+
+header section div span:nth-of-type(6){
+  position: absolute;
+  left: 3%;
+}
+
+header section div span:nth-of-type(7){
+  position: absolute;
+  left: 20%;
+}
+
+header section div span:nth-of-type(8){
+  position: absolute;
+  left: 40%;
+}
+
+header section div span:nth-of-type(9){
+  position: absolute;
+  left: 60%;
+}
+
+header section div span:nth-of-type(10){
+  position: absolute;
+  left: 80%;
+}
+
+
+
+
+
+        /* ========================*/
+        /*=    footer commanden   =*/
+        /* ========================*/
 footer{
   background-color: var(--background-footer-color);
   position: absolute;
   right: 0;
   left: 0;
   height: 4em;
+  margin-top: 20%;
 }
 
 footer p{
@@ -129,33 +372,74 @@ footer p{
 
 
 
-        /* ===================================*/
-        /*=  section 1 commands (algemeen)   =*/
-        /* =============================-=====*/
+        /* ===========================*/
+        /*=  main algemeen commands  =*/
+        /* ===========================*/
 
-main section:nth-of-type(1){
-  display:flex;
-  flex-direction:column-reverse;
-
+main{
+  max-width: 100%;
 }
 
-main section:nth-of-type(1) img{
-  width: 125%;
-  height: 100%;
-  align-self: center;
-}
-
-
-main section h2{
+main h3{
   font-family: var(--hoofd-font);
-  font-size: 2.5em;
-  font-weight: 300 ;
-  text-transform: uppercase;
-  margin: .5em 0 2em 0 ;
-  width: 125%;
+  font-size: 2em;
+  font-weight: 300;
 
+  margin-bottom: 1%;
+}
+
+main section{
   position: relative;
-  left: -2.5em;
+}
+
+main section p{
+  font-family: var(--hoofd-font);
+  font-size: 1em;
+
+  letter-spacing: 1px;
+
+  margin: 0;
+  line-height: 1.75;
+  word-wrap: break-word;
+}
+
+
+
+
+        /* =====================================*/
+        /*=  main sections algemeen commands  =*/
+        /* =====================================*/
+
+main section:nth-of-type(n+1){
+  display: grid;
+  grid-template-columns: 19% 1fr 1fr 1fr 1fr  19%;
+  column-gap: 1.3em;
+  margin-top: 4em;
+} 
+
+main section p{
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+
+
+        /* ========================*/
+        /*=  section 1  commands  =*/
+        /* ========================*/
+
+main section:nth-of-type(1) h3{
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 1;
+}
+
+main section:nth-of-type(1) p{
+  grid-column-start: 2; 
+  grid-column-end: -2;
+  letter-spacing: 0;
+
+  
 }
 
 
@@ -165,14 +449,61 @@ main section h2{
         /* ========================*/
         /*=  section 2  commands  =*/
         /* ========================*/
-main section:nth-of-type(2){
-  display: grid;
-  grid-template-columns: 19% 20% 36% 20%;
+
+main section:nth-of-type(2) h3{
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+
+  margin: 0;
 }
 
-main section:nth-of-type(2) p{
+main section:nth-of-type(2) p:first-of-type{
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+
+  margin-top: .5em;
+  margin-bottom: 1em;
+} 
+
+main section:nth-of-type(2)>p:last-of-type{
+  margin: 0;
+  padding-left: 1.2em;
+
+  border-left: solid var(--accent-color) .1em;
+
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+
+main section:nth-of-type(2)>img{
+  width: 100%;
+
   grid-column-start: 2;
-  grid-column-end:4;
+  grid-column-end: 4;
+
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+main section:nth-of-type(2) nav{
+  grid-column-start: 5;
+  grid-row-start: 1;
+
+}
+
+main section:nth-of-type(2)  nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+  margin: 0;
+}
+
+main section:nth-of-type(2)  nav ul li a img{
+  width: 30px;
 }
 
 
@@ -182,116 +513,463 @@ main section:nth-of-type(2) p{
         /* ========================*/
         /*=  section 3  commands  =*/
         /* ========================*/
-main section:nth-of-type(3){
-  margin-top: 4em;
+main section:nth-of-type(3) h3{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
 
-  display: grid;
-  grid-template-columns: 19% 20% 36% 20%;
-
-  position: relative;
+  margin: 0;
 }
 
-main section:nth-of-type(3) div{
-  grid-column-start: 3;
+main section:nth-of-type(3) p:first-of-type{
+  grid-column-start: 2;
   grid-column-end: 4;
-}
+  grid-row-start: 2;
 
-main section:nth-of-type(3) div p:first-of-type{
-  margin: .5em 0 1em 0;
-}
+  margin-top: .5em;
+  margin-bottom: 1em;
+} 
 
-main section:nth-of-type(3) div p:last-of-type{
-  padding-left: 1.5em ;
-  /* width: 27em; */
+main section:nth-of-type(3) p:last-of-type{
+  margin:0;
+  padding-left: 1.5em;
 
-  letter-spacing: 1px;
-  line-height: 1.75;
+  border-left: solid var(--accent-color) .1em;
+
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 main section:nth-of-type(3)>img{
   width: 100%;
 
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
+
   grid-row-start: 1;
+  grid-row-end: 4;
 }
 
-main section:nth-of-type(3) div nav{
-  grid-column-end: 3;
-  grid-row-start: 1;
-}
-
-main section:nth-of-type(3) div nav ul{
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}
-
-
-
-
-
-        /* ========================*/
-        /*=  section 4  commands  =*/
-        /* ========================*/
-
-main section:nth-of-type(4) {
-  margin-top: 4em;
-  margin-bottom: 15em;
-  
-  display: grid;
-  grid-template-columns: 19% 36% 20% 20%;
-  width: 100%;
-}
-
-main section:nth-of-type(4) div{
-grid-column-start: 2;
-grid-column-end: 3;
-
-}
-
-main section:nth-of-type(4) div p:first-of-type{
-  margin: .5em 0 1em 0;
-}
-
-main section:nth-of-type(4) div p:last-of-type{
-  padding-left: 1.5em ;
-  /* width: 27em; */
-
-  letter-spacing: 1px;
-  line-height: 1.75;
-}
-
-main section:nth-of-type(4)>img{
-  width: 22em;
-  width: 100%;
-  
+main section:nth-of-type(3) nav{
   grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-}
-
-main section:nth-of-type(4) div nav{
   grid-column-end: 3;
   grid-row-start: 1;
 }
 
-main section:nth-of-type(4) div nav ul{
+main section:nth-of-type(3)  nav ul{
   display: flex;
   justify-content: space-between;
-  width: 50%;
-}
+  align-items: center;
 
-
-
-
-
-nav ul li{
   list-style: none;
+  margin:0;
 }
 
-nav ul li a img{
+main section:nth-of-type(3)  nav ul li a img{
   width: 30px;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* ******************************** */
+        /*=  Songs / Novels page commands  =*/
+        /* ******************************** */
+
+    /* =================== */
+    /*=  header commands  =*/
+    /* =================== */
+
+header section.songs-header h2{
+  font-size: 2em;
+  letter-spacing: 0.1em; 
+}
+
+header section.songs-header div{
+  width: 66%;
+}
+
+
+    /* ================= */
+    /*=  main commands  =*/
+    /* ================= */
+
+main.songs-page nav:first-child{
+  margin: 0;
+  margin-top: 2em;
+
+  display: flex;
+  justify-content: center;
+}
+
+main.songs-page nav:first-child ul{
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+
+  padding: 0;
+}
+
+main.songs-page nav:first-child ul li a{
+  font-family: var(--hoofd-font);
+  font-size: 1.1em;
+  color: var(--footer-color);
+  text-decoration: none;
+}
+
+main.songs-page nav:first-child ul li:nth-of-type(2) p{
+  color: var(--font-color);
+  font-size: 2em;
+  margin: 0;
+}
+
+main.songs-page nav:first-child ul li:nth-of-type(3) a{
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+
+
+
+
+    /* ========================== */
+    /*=  main sections commands  =*/
+    /* ========================== */
+
+main.songs-page section{
+  display: grid;
+  grid-template-columns: 13% 1fr 1fr 1fr 13%;
+  grid-template-rows: auto;
+  column-gap: 2.5em;
+  margin-top: 4em;
+} 
+
+
+main.songs-page section h3{
+  font-size: 1.7em;
+
+  display: flex;
+  justify-content: center;
+
+  align-self: center;
+  margin-bottom: 2em;
+}
+
+main.songs-page section p{
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+main.songs-page section>p:nth-of-type(1){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+
+
+
+main.songs-page section>p:nth-of-type(2){
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  border: none;
+}
+
+    /* navigatie */
+
+main.songs-page section nav{
+  margin: 0;
+}
+
+main.songs-page section nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main.songs-page section nav a{
+  text-decoration: none;
+  color: var(--accent-color); 
+  position: relative;
+  margin: 0;
+}
+
+main.songs-page section nav a img{
+  width: 100%;
+}
+
+main.songs-page section nav a span{
+  width: 1.5em;
+  height: 1.5em;
+  background-color: white;
+
+  text-align: center;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bolder;
+
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+}
+
+main.songs-page section nav ul li:nth-of-type(1){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+}
+
+main.songs-page section nav ul li:nth-of-type(2){
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+}
+
+
+    /* =============================== */
+    /*=  sections list commands  =*/
+    /* =============================== */
+
+main.songs-page section>ul{
+  columns: 2;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+
+  line-height: 7em;
+
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+
+main.songs-page section>ul li p{
+  font-size: 1em;
+  text-transform: none;
+  text-transform: uppercase; 
+  margin: 0;
+  margin-top: .5em;
+}
+
+main.songs-page section>ul li:nth-of-type(8){
+  margin-bottom: 2.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* ============================*/
+      /*=  kleiner scherm commands  =*/
+      /* ============================*/
+@media(max-width:65%){
+    /* image cover  */
+header img{
+  width: 65%;
+  margin: 0;
+}
+        /* =============================*/
+        /*=  header section commands   =*/
+        /* =============================*/
+header section{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  gap: 2em;
+  padding-top: 3.5em;
+}
+
+/*
+ @media(max-width:800px){
+            /* ==========================*/
+          /*=  header section commands  =*/
+          /* ============================*/
+
+header section div span:nth-of-type(9),
+header section div span:nth-of-type(10){
+  display: none;
+}
+          /* =====================================*/
+          /*=  main sections algemeen commands  =*/
+          /* =====================================*/
+
+    main section:nth-of-type(n+1){
+      padding: 2em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5em;
+      margin-top: 4em;
+    } 
+
+
+    
+        /* ========================*/
+        /*=  section 2  commands  =*/
+        /* ========================*/
+
+  main section:nth-of-type(2) h3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    margin: 0;
+  }
+
+  main section:nth-of-type(2) p:first-of-type{
+    margin-top: -25px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+  } 
+
+  main section:nth-of-type(2) p:last-of-type{
+    margin-top: -5px;
+    padding-left: 1.5em;
+
+    border-left: solid var(--accent-color) .1em;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+  }
+
+  main section:nth-of-type(2)>img{
+    width: 100%;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  main section:nth-of-type(2) nav{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    justify-self: center;
+
+    width: 20em;
+
+    margin: 0;
+    padding: 0;
+  }
+
+          /* ========================*/
+          /*=  section 3  commands  =*/
+          /* ========================*/
+
+  main section:nth-of-type(3){
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    margin-top: 4em;
+  } 
+
+  main section:nth-of-type(3) h3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    margin: 0;
+  }
+
+  main section:nth-of-type(3) p:first-of-type{
+    margin-top: -25px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+  } 
+
+  main section:nth-of-type(3) p:last-of-type{
+    margin-top: -5px;
+    padding-left: 1.5em;
+
+    border-left: solid var(--accent-color) .1em;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+  }
+
+  main section:nth-of-type(3)>img{
+    width: 100%;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  main section:nth-of-type(3) nav{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    justify-self: center;
+
+    width: 20em;
+
+    margin: 0;
+    padding: 0;
+  }
+
+}
