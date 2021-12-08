@@ -7,18 +7,39 @@
   --font-color:white;
   --background-color: black;
   --footer-color: #c5c3c3;
-  --background-footer-color: #282828;
+  --footer-background-color: #282828;
 
    /* fonts  */
-   /* --hoofd-font:"Roboto Condensed",sans-serif; */
-   --hoofd-font:'Black Han Sans', sans-serif;
+   /* --font-hoofd:"Roboto Condensed",sans-serif; */
+   --font-hoofd:'Black Han Sans', sans-serif;
 
    /* menu button colors  */
-   --menu-button-color: rgba(255, 255, 255, 0.564);
-
-   /* --secondary-font:; */
+   --button-menu-color1: white;
+   --button-menu-color2: rgba(255, 255, 255, 0.564);
+   --button-background-color: rgba(0, 0, 0, .5);
 }
 
+
+@media (prefers-color-scheme: light){
+  :root{
+     /* kleuren */
+  --accent-color: #ff2c60;
+  --font-color:black;
+  --background-color: white;
+  --footer-color: #c5c3c3;
+  --footer-background-color: #282828;
+
+   /* fonts  */
+   /* --font-hoofd:"Roboto Condensed",sans-serif; */
+   --font-hoofd:'Black Han Sans', sans-serif;
+
+   /* menu button colors  */
+   --button-menu-color1: black;
+   --button-menu-color2: rgba(255, 255, 255, 0.564);
+   --button-background-color: rgba(255, 255, 255, 0.5);
+
+  }
+}
 
 
 
@@ -29,7 +50,6 @@
 html, body {
   padding: 0;
   margin: 0;
-  /* width: 100vw; */
   height: 100vh;
   position: relative;
 }
@@ -37,7 +57,11 @@ html, body {
 
 body{
   background-color: var(--background-color);
-  color: var(--font-color);
+  /* color: var(--font-color); */
+}
+
+a{
+  cursor: pointer;
 }
 
 main{
@@ -45,59 +69,68 @@ main{
   z-index: 0;
 }
 
-body>nav{
-  position: absolute;
-  right: 10em;
 
-
-  margin: 0;
-  padding: 0;
-
-}
-
-body>nav a{
-  text-decoration: none;
-  font-size: 3em;
-  color: var(--footer-color);
-  /* background-color: pink; */
-  margin: 0;
-  width: 1.2em;
-  height: 1.2em;
-
-  border: solid 2px var(--footer-color);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button{
-  /* opacity: 0; */
+    /* to top button */
+    /* ============= */
+main>nav button{
   position: fixed;
-  right: 6em;
-  bottom: 3em;
+  right: 8%;
+  bottom: 119px;
 
-  width: 1.2em;
-  height: 1.2em;
+  width: 46px;
+  height: 46px;
   padding: 0;
   margin: 0;
-  border: solid .01em var(--footer-color);
+  border: solid .01em var(--font-color);
 
-  background-color: var(--background-color);
+  background-color: var(--button-background-color);
   outline: none;
 
-  font-size: 1.5em;
-  color: var(--footer-color);
+  cursor: pointer;
+
+  /* opacity: 0; */
 
 }
 
-/* button.add{
-  opacity: 1;
-} */
+main>nav button::after{
+  content: "^";
+  margin: 0;
+  font-size: 3em;
+  color: var(--font-color);
+  transform: scaleX(1.5);
 
-        /* ========================*/
-        /*=    header commanden   =*/
-        /* ========================*/
+  position: absolute;
+  top: 7px;
+  bottom: 15px;
+  left: 10px;
+  right: 10px;
+}
+
+main>nav button:hover{
+  box-shadow: 0 0 2px 2px var(--accent-color);
+}
+
+main>nav button:hover::after{
+  color: var(--accent-color);
+}
+
+main>nav button:focus{
+  box-shadow: 0 0 2px 2px var(--accent-color);
+}
+
+main>nav button:focus::after{
+  color: var(--accent-color);
+}
+
+
+
+
+
+
+        /* ===============================*/
+        /*=  header algemeen commanden   =*/
+        /* ===============================*/
+
 header{
   display: flex;
   flex-direction: column;
@@ -113,14 +146,51 @@ header h1{
   z-index: 1;
 }
 
+header h1 a{
+  outline: none;
+}
+
 header h1 a img{
   width: 35%;
 }
+
+header h1 a:hover img{
+  filter: invert(100%) 
+  sepia(100%) 
+  saturate(0%) 
+  hue-rotate(288deg) 
+  brightness(105%) 
+  contrast(103%);
+}
+
+header h1 a:active img{
+  filter: none;
+
+  box-shadow: inset 0 0 3px 22px var(--font-color),
+  0 0 3px 3px var(--font-color);
+}
+
+header h1 a:focus img{
+  border: solid 3px black;
+  filter: invert(100%) 
+  sepia(100%) 
+  saturate(0%) 
+  hue-rotate(288deg) 
+  brightness(105%) 
+  contrast(103%);
+}
+
+
+
+
+
 
     /* image cover  */
 header img{
   width: 66%;
   margin: 0;
+
+  transition: .5s;
 }
 
 
@@ -133,31 +203,79 @@ header img{
         /* ==========================*/
 
     /* navigatie knop*/
-header>div:first-of-type{
+header button{
+  background-color: transparent;
   border: none;
-  background-color: none;
 
   position: fixed;
   right: 2%;
-  top: 4%;
-  height: 1.5em;
+  top: 1%;
+
+  height: 3em;
+  width: 3em; 
+
+  padding: 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  cursor: pointer;
+  outline: none;
 
   z-index: 200;
 }
 
-header>div:first-of-type span:nth-of-type(1),
-header>div:first-of-type span:nth-of-type(2),
-header>div:first-of-type span:nth-of-type(3){
-  background-color: var(--menu-button-color);
-  width: 2.2em;
-  height: .05em;
+header button span{
+	width: 70%;
+	height: 1px;
+	background-color:white;
+	
+	position: absolute;
+
+	transition:.7s;
 }
 
-    /* navigatie */
+header button span:nth-of-type(1) {
+	transform:translatey(-10px);
+}
+
+header button span:nth-of-type(3) {
+	transform:translatey(10px);
+}
+
+header button.veranderen span:nth-of-type(1) {
+	transform:rotate(45deg);
+}
+
+header button.veranderen span:nth-of-type(2) {
+	opacity:0;
+}
+
+header button.veranderen span:nth-of-type(3) {
+	transform:rotate(-45deg);
+}
+
+
+
+header button:hover span{
+  background-color: var(--accent-color);
+}
+
+header button:active span{
+  filter: drop-shadow(0 0 2px var(--accent-color) );
+  background-color: white;
+  transition: .1s;
+}
+
+header button:focus span{
+  border: solid 2px var(--accent-color);
+}
+
+
+
+    /* navigatie slid */
+    /* ============== */
 
 header nav{
   padding: 70px 15% ;
@@ -182,12 +300,13 @@ header nav{
 }
 
 header nav>p{
-  font-family: var(--hoofd-font);
+  font-family: var(--font-hoofd);
   margin: 0;
   position: absolute;
-  bottom: 0;
+  bottom: 7px;
 
   left: 18%;
+  pointer-events: none;
 }
 
 header nav ul{
@@ -209,31 +328,143 @@ header nav ul:first-of-type{
 }
 
 header nav ul:first-of-type li a{
-  font-family: var(--hoofd-font);
+  font-family: var(--font-hoofd);
   font-size: 4vh;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
 
   color: var(--font-color);
+
+  position: relative;
+
+  outline: none;
 }
 
-    /* list 2 */
+header nav ul li a:hover{
+  color:var(--accent-color);
+}
+
+header nav ul li a::after{
+  filter: drop-shadow(0 0 3px var(--accent-color));
+  color: var(--font-color);
+  transform: scaleX(1);
+}
+
+header nav ul:first-of-type li a::after{
+  content: "";
+  background-color:currentcolor;
+
+  margin-left: 1em;
+
+  position:absolute;
+  top: 50%;
+  bottom: 50%;
+
+  width: 20em;
+  height: .08em;
+
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition:.3s;
+
+}
+
+header nav ul li a:active{
+  filter: drop-shadow(0 0 3px var(--accent-color));
+  color: var(--font-color);
+  transition: 1s;
+}
+
+header nav ul li a:active::after{
+  background-color: var(--font-color);
+  transform: scaleX(1);
+}
+
+header nav ul:first-of-type li a:hover::after {
+  background-color: var(--accent-color);
+  filter: none;
+  transform: scaleX(1);
+}
+
+header nav ul li a:visited{
+  filter: drop-shadow(0 0 2px var(--font-color) );
+}
+
+header nav ul li a:visited::after{
+  background-color: var(--accent-color);
+  transform: scaleX(1);
+}
+
+header nav ul li a:focus{
+  color: var(--accent-color);
+  /* filter: drop-shadow(0 0 2px var(--accent-color) ); */
+}
+
+header nav ul li a:focus::after{
+  background-color: var(--accent-color);
+  filter: none;
+  transform: scaleX(1);
+}
+
+    /* list 2 social media icons */
 
 header nav ul:last-of-type{
   width: 18em;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+align-items: center;
 }
 
-header nav ul:last-of-type li img{
-  width: 3em;
+header nav ul:last-of-type li a{
+  outline: none;
+}
+
+header nav ul:last-of-type li a img{
+  width: 4em;
   margin: 0;
 }
 
-header nav ul li a:hover{
-  color:var(--accent-color);
+header nav ul:last-of-type li a:hover{
+  /* Ik heb dit filter via een youtube video gehaald
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
+  niet vragen alsjeblieft */
+  filter: 
+  invert(63%) 
+  sepia(59%) 
+  saturate(5108%) 
+  hue-rotate(329deg) 
+  brightness(101%) 
+  contrast(101%);
+}
+
+header nav ul:last-of-type li a:focus{
+  /* Ik heb dit filter via een youtube video gehaald
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
+  niet vragen alsjeblieft */
+  filter: 
+  invert(63%) 
+  sepia(59%) 
+  saturate(5108%) 
+  hue-rotate(329deg) 
+  brightness(101%) 
+  contrast(101%);
+}
+
+header nav ul:last-of-type li a:visited{
+  /* Ik heb dit filter via een youtube video gehaald
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
+  niet vragen alsjeblieft */
+  filter: 
+  invert(63%) 
+  sepia(59%) 
+  saturate(5108%) 
+  hue-rotate(329deg) 
+  brightness(101%) 
+  contrast(101%);
 }
 
 
@@ -255,18 +486,18 @@ header section{
 }
 
 header section h2{
-  font-family: var(--hoofd-font);
+  font-family: var(--font-hoofd);
   text-transform: uppercase;
   font-weight: 100;
   font-size: 2.1em;
-  letter-spacing: 0.2em;
+  letter-spacing: .2em;
   transform: scale(1, 1.5);
   margin: 0;
 }
 
 
 header section div{
-  height: 2em;
+  height: 2.5em;
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -316,7 +547,7 @@ header section div span:nth-of-type(9),
 header section div span:nth-of-type(10){
   position: absolute;
   background-color: var(--font-color);
-  height: 2em;
+  height: 2.5em;
   width: .05em;
 }
 
@@ -353,7 +584,7 @@ header section div span:nth-of-type(10){
         /*=    footer commanden   =*/
         /* ========================*/
 footer{
-  background-color: var(--background-footer-color);
+  background-color: var(--footer-background-color);
   position: absolute;
   right: 0;
   left: 0;
@@ -362,7 +593,7 @@ footer{
 }
 
 footer p{
-  font-family: var(--hoofd-font);
+  font-family: var(--font-hoofd);
   font-size: .75em;
   padding-top: 1em;
   text-align: center;
@@ -381,9 +612,11 @@ main{
 }
 
 main h3{
-  font-family: var(--hoofd-font);
-  font-size: 2em;
-  font-weight: 300;
+  font-family: var(--font-hoofd);
+  font-size: 1.7em;
+  font-weight: lighter;
+  transform: scale(1, 1.3);
+  letter-spacing: .01em;
 
   margin-bottom: 1%;
 }
@@ -393,7 +626,7 @@ main section{
 }
 
 main section p{
-  font-family: var(--hoofd-font);
+  font-family: var(--font-hoofd);
   font-size: 1em;
 
   letter-spacing: 1px;
@@ -432,14 +665,14 @@ main section:nth-of-type(1) h3{
   grid-column-start: 2;
   grid-column-end: -2;
   grid-row-start: 1;
+
+  text-transform: uppercase;
 }
 
 main section:nth-of-type(1) p{
   grid-column-start: 2; 
   grid-column-end: -2;
   letter-spacing: 0;
-
-  
 }
 
 
@@ -475,6 +708,8 @@ main section:nth-of-type(2)>p:last-of-type{
 
   grid-column-start: 4;
   grid-column-end: 6;
+
+  grid-row-start: 3;
 }
 
 main section:nth-of-type(2)>img{
@@ -490,7 +725,8 @@ main section:nth-of-type(2)>img{
 main section:nth-of-type(2) nav{
   grid-column-start: 5;
   grid-row-start: 1;
-
+  width: 80%;
+  margin-left: 20%;
 }
 
 main section:nth-of-type(2)  nav ul{
@@ -500,12 +736,52 @@ main section:nth-of-type(2)  nav ul{
 
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 main section:nth-of-type(2)  nav ul li a img{
   width: 30px;
 }
 
+main section nav ul li a{
+  outline: none;
+}
+
+main section nav ul li a:focus{
+  /* Ik heb dit filter via een youtube video gehaald
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
+  niet vragen alsjeblieft */
+  filter: 
+  invert(63%) 
+  sepia(59%) 
+  saturate(5108%) 
+  hue-rotate(329deg) 
+  brightness(101%) 
+  contrast(101%);
+}
+
+main section nav ul li a:hover{
+  /* Ik heb dit filter via een youtube video gehaald
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
+  niet vragen alsjeblieft */
+  filter: 
+  invert(63%) 
+  sepia(59%) 
+  saturate(5108%) 
+  hue-rotate(329deg) 
+  brightness(101%) 
+  contrast(101%);
+}
+
+main section nav ul li a:visited{
+  filter: drop-shadow(0 0 5px var(--accent-color) );
+}
+
+main section nav ul li a:active{
+  filter: drop-shadow(0 0 5px var(--accent-color) );
+}
 
 
 
@@ -554,6 +830,9 @@ main section:nth-of-type(3) nav{
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 1;
+  
+  width: 80%;
+  margin-left: 20%;
 }
 
 main section:nth-of-type(3)  nav ul{
@@ -563,6 +842,7 @@ main section:nth-of-type(3)  nav ul{
 
   list-style: none;
   margin:0;
+  padding: 0;
 }
 
 main section:nth-of-type(3)  nav ul li a img{
@@ -603,29 +883,354 @@ main section:nth-of-type(3)  nav ul li a img{
 
 
 
-        /* ******************************** */
-        /*=  Songs / Novels page commands  =*/
-        /* ******************************** */
+      /* ============================*/
+      /*=  kleiner scherm commands  =*/
+      /* ============================*/
 
-    /* =================== */
-    /*=  header commands  =*/
-    /* =================== */
+    /* ipad scherm */
+    /* ============*/
+/* @media(max-width: 768px){ */
 
-header section.songs-header h2{
-  font-size: 2em;
-  letter-spacing: 0.1em; 
+@media(max-width: 940px){
+    /* =============================*/
+    /*=  header algemeen commands  =*/
+    /* =============================*/
+  header h1 a img{
+    width: 25%;
+  }
+
+  header img{
+    width: 100%;
+    margin: 0;
+
+    transition: .5s;
+  }
+
+  header section{
+    width: 100%;
+  }
+    /* ============================*/
+    /*=  header section commands  =*/
+    /* ============================*/
+
+  header section div span:nth-of-type(9),
+  header section div span:nth-of-type(10){
+    display: none;
+    padding: 0 5%;
+  }
+    /* ====================================*/
+    /*=  main sections algemeen commands  =*/
+    /* ====================================*/
+
+  main section:nth-of-type(n+1){
+    /* padding-left: 1.5em; */
+    display: grid;
+    grid-template-columns:3% 1fr 1fr 1fr 1fr 3%;
+    gap: 1.5em;
+    margin-top: 4em;
+  } 
+
+    /* =================================*/
+    /*=  main sections 2 + 3 commands  =*/
+    /* =================================*/
+  main section:nth-of-type(2) p:first-of-type,
+  main section:nth-of-type(3) p:first-of-type{
+    margin-top: -25px;
+
+    font-size: .75em;
+  } 
+   
+  main section:nth-of-type(2) p:last-of-type,
+  main section:nth-of-type(3) p:last-of-type{
+    margin-top: -20px;
+  } 
+}
+  
+
+      /* iphone 6/7/8 plus scherm */
+      /* =========================*/
+@media(max-width: 414.4px){
+
+  /* =============================*/
+  /*=  header algemeen commands  =*/
+  /* =============================*/
+  
+  header h1{
+    position: fixed;
+    left: 4%;
+    top: .5%;
+  }
+
+  header h1 a img{
+    width: 20%;
+  }
+
+  header nav>p{
+    font-size: .7em ;
+  }
+
+    /* =============================*/
+    /*=  header section commands   =*/
+    /* =============================*/
+  header section{
+    width: 90%;
+    gap: .5em;
+
+    padding-top: 3em;
+  }
+  
+  header section h2{
+    font-weight: 300;
+    font-size: 2.1em;
+    letter-spacing: .1em;
+    transform: scale(1, 1.4);
+  }
+
+  header section div{
+    height: 2em;
+    width: 85%;
+
+    position: relative;
+  }
+
+  /* vertical lines */
+  header section div span:nth-of-type(6),
+  header section div span:nth-of-type(7){
+    position: absolute;
+    background-color: var(--font-color);
+    height: 2em;
+    width: .05em;
+  }
+
+  header section div span:nth-of-type(6){
+    position: absolute;
+    left: 10%;
+  }
+
+  header section div span:nth-of-type(7){
+    position: absolute;
+    left: 60%;
+  }
+
+  header section div span:nth-of-type(8){
+    display: none;
+  }
+
+
+
+    /* ====================================*/
+    /*=  main sections algemeen commands  =*/
+    /* ====================================*/
+
+  
+  main section:nth-of-type(n+1){
+    display: grid;
+    grid-template-columns:3% 1fr 1fr 1fr 1fr 3%;
+    column-gap: 1em;
+    row-gap: 1.5em;
+    margin-top: 8em;
+  } 
+
+  main section:nth-of-type(1){
+    margin-top: 1em;
+  }
+
+  main section:nth-of-type(2) h3,
+  main section:nth-of-type(3) h3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    margin: 0;
+    margin-bottom: 6px;
+  }
+
+  main section:nth-of-type(2) p:first-of-type,
+  main section:nth-of-type(3) p:first-of-type{
+    margin-top: -25px;
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 3;
+
+    font-size: .75em;
+  }
+
+  main section:nth-of-type(2) p:last-of-type,
+  main section:nth-of-type(3) p:last-of-type{
+    /* margin-top: -20px; */
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 4;
+  } 
+
+  main section:nth-of-type(2) img,
+  main section:nth-of-type(3) img{
+    width: 100%;
+
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  main section:nth-of-type(2) nav,
+  main section:nth-of-type(3) nav{
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 5;
+
+    width: 100%;
+
+
+    margin: 0;
+    padding: 0;
+  }
+
+  main section:nth-of-type(2) nav ul,
+  main section:nth-of-type(3) nav ul{
+    padding: 0 4em;
+    gap: 1em;
+  }
+
+  main section:nth-of-type(2) nav ul li a img,
+  main section:nth-of-type(3) nav ul li a img{
+    width: 3em;
+  } 
 }
 
-header section.songs-header div{
-  width: 66%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ******************************** */
+    /*=  Songs / Novels page commands  =*/
+    /* ******************************** */
+
+
+/* =================== */
+/*=  header commands  =*/
+/* =================== */
+
+.songsPage header section h2{
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
 }
 
+.songsPage header section div{
+  width: 15%;
+}
+
+.songsPage header section div span:nth-of-type(1){
+  width: 75%;
+}
+
+.songsPage header section div span:nth-of-type(2){
+  width: 50%;
+}
+
+.songsPage header section div span:nth-of-type(3){
+  width: 100%;
+}
+
+.songsPage header section div span:nth-of-type(4){
+  width: 60%;
+}
+
+.songsPage header section div span:nth-of-type(5){
+  width: 70%;
+}
+
+.songsPage header section div span:nth-of-type(6),
+.songsPage header section div span:nth-of-type(7){
+  display:none;
+}
 
     /* ================= */
     /*=  main commands  =*/
     /* ================= */
 
-main.songs-page nav:first-child{
+    /* taal navigatie */
+    /* ============== */
+.songsPage main>nav:first-child{
   margin: 0;
   margin-top: 2em;
 
@@ -633,8 +1238,9 @@ main.songs-page nav:first-child{
   justify-content: center;
 }
 
-main.songs-page nav:first-child ul{
+.songsPage main>nav:first-child ul{
   list-style: none;
+  width: fit-content;
 
   display: flex;
   justify-content: space-between;
@@ -644,101 +1250,162 @@ main.songs-page nav:first-child ul{
   padding: 0;
 }
 
-main.songs-page nav:first-child ul li a{
-  font-family: var(--hoofd-font);
+.songsPage main>nav:first-child ul li:nth-of-type(1) a{
+  font-family: var(--font-hoofd);
   font-size: 1.1em;
   color: var(--footer-color);
   text-decoration: none;
+  margin: 0;
 }
 
-main.songs-page nav:first-child ul li:nth-of-type(2) p{
+.songsPage main>nav:first-child ul li:nth-of-type(2) p{
   color: var(--font-color);
   font-size: 2em;
   margin: 0;
 }
 
-main.songs-page nav:first-child ul li:nth-of-type(3) a{
+.songsPage main>nav:first-child ul li:nth-of-type(3) a{
   color: var(--accent-color);
   font-weight: bold;
 }
 
+.songsPage main>nav:first-child ul li a{
+  outline: none;
+}
+
+.songsPage main>nav:first-child ul li a:hover{
+  color: var(--accent-color);
+}
+
+.songsPage main>nav:first-child ul li a:focus{
+  color: var(--font-color);
+  box-shadow: 
+  0 0 2px 2px var(--font-color),
+  0 0 4px 4px var(--accent-color);
+}
 
 
 
 
-    /* ========================== */
-    /*=  main sections commands  =*/
-    /* ========================== */
 
-main.songs-page section{
+        /* ========================== */
+        /*=  main sections commands  =*/
+        /* ========================== */
+.songsPage main section:nth-of-type(n+1){
   display: grid;
-  grid-template-columns: 13% 1fr 1fr 1fr 13%;
-  grid-template-rows: auto;
-  column-gap: 2.5em;
-  margin-top: 4em;
+  grid-template-columns:3% 1fr 1fr 3%;
+  gap: 1em;
 } 
 
+.songsPage main section h3{
+  font-size: 1.2em;
+  text-transform: capitalize;
+  letter-spacing: .1em;
 
-main.songs-page section h3{
-  font-size: 1.7em;
-
-  display: flex;
-  justify-content: center;
-
-  align-self: center;
-  margin-bottom: 2em;
-}
-
-main.songs-page section p{
-  text-transform: uppercase;
-  font-size: 1.5em;
-}
-
-main.songs-page section>p:nth-of-type(1){
   grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-}
+  grid-column-end: -2;
+  grid-row-start: 1;
 
-
-
-main.songs-page section>p:nth-of-type(2){
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  border: none;
-}
-
-    /* navigatie */
-
-main.songs-page section nav{
   margin: 0;
 }
 
-main.songs-page section nav ul{
+.songsPage main section h3::after{
+content: "";
+width:75%;
+height: 2px;
+background-color: var(--accent-color);
+top: 50%;
+}
+
+.songsPage main section h3::after{
+  margin-left: 1em;
+  position: absolute;
+  right: -.2em;
+
+  transform-origin: left;
+
+  }
+
+
+        /* navigatie */
+        /* ========= */
+.songsPage main section nav {
+  margin: 0;
+
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 2;
+}
+
+.songsPage main section nav ul{
   list-style: none;
   margin: 0;
   padding: 0;
+
+  display: grid;
+  justify-self: center;
+  column-gap: 1em;
 }
 
-main.songs-page section nav a{
-  text-decoration: none;
-  color: var(--accent-color); 
+.songsPage main section nav ul li{
+  margin: 0;
+}
+
+.songsPage main section nav ul li p{
+  text-transform: uppercase;
+  font-size: 1em;
+
+  border: none;
+  padding: 0;
+}
+
+.songsPage main section nav ul li a{
   position: relative;
   margin: 0;
 }
 
-main.songs-page section nav a img{
-  width: 100%;
+.songsPage main section nav ul li a img{
+  /* width: 100%; */
+  width: 10.5em;
 }
 
-main.songs-page section nav a span{
-  width: 1.5em;
+
+.songsPage main section nav ul li a:hover,
+.songsPage main section nav ul li a:focus{
+  filter: none;
+}
+
+
+/* .songsPage main section nav ul li a:hover img{
+  overflow: hidden;
+  transform: scale(1.03);
+  transition: .5s ease;
+} */
+
+
+.songsPage main section nav ul li a:active img{
+  box-shadow: 
+  0 0 2px 2px var(--font-color),
+  0 0 4px 4px var(--accent-color);
+}
+
+.songsPage main section nav ul li a:focus img{
+  box-shadow: 
+  0 0 2px 2px var(--font-color),
+  0 0 4px 4px var(--accent-color);
+}
+
+.songsPage main section nav ul li a span{
+  width: 2em;
   height: 1.5em;
   background-color: white;
+  color: var(--accent-color);
 
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin: 0;
+  padding-top: 8px;
   font-size: 1.5em;
   font-weight: bolder;
 
@@ -746,60 +1413,110 @@ main.songs-page section nav a span{
   right: 0;
   bottom: 3px;
 }
+ 
 
-main.songs-page section nav ul li:nth-of-type(1){
+.songsPage main section nav ul li a:hover span,
+.songsPage main section nav ul li a:focus span{
+  background-color: var(--accent-color);
+  color: var(--font-color);
+}
+
+.songsPage main section nav ul li a:active span{
+  background-color: var(--font-color);
+  color: var(--accent-color);
+}
+
+
+
+.songsPage main section nav ul li:nth-of-type(1){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.songsPage main section nav ul li:nth-of-type(2){
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 3;
-}
+  grid-row-start: 2;
+  grid-row-end: 3;
+} 
 
-main.songs-page section nav ul li:nth-of-type(2){
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-}
-
-
-    /* =============================== */
-    /*=  sections list commands  =*/
-    /* =============================== */
-
-main.songs-page section>ul{
-  columns: 2;
-  list-style: none;
-  width: 100%;
-  padding: 0;
-
-  line-height: 7em;
-
-  grid-column-start: 4;
-  grid-column-end: 5;
+.songsPage main section iframe{
+  grid-column-start: 2;
+  grid-column-end: -2;
   grid-row-start: 3;
   grid-row-end: 4;
+
+  width: 100%;
+  height: 266px;
+  /* justify-self: center; */
 }
 
+.songsPage main section>ul{
+  list-style: none;
+  /* width: 13em; */
+  padding: 0;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+} 
 
-main.songs-page section>ul li p{
-  font-size: 1em;
-  text-transform: none;
-  text-transform: uppercase; 
-  margin: 0;
-  margin-top: .5em;
+.songsPage main section>ul li{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1em;
+
+  line-height: 1em;
 }
 
-main.songs-page section>ul li:nth-of-type(8){
-  margin-bottom: 2.5em;
+.songsPage main section>ul li p:first-of-type{
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  line-height: 1.5em;
 }
 
+.songsPage main section>ul li p:last-of-type{
+  border: 0;
+  padding: 0;
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
 
+.songsPage main>nav{
+  display: flex;
 
+  justify-content: center;
+}
 
+.songsPage main>nav ul{
+  padding: 0;
+  margin-top: 15%;
 
+  width: 7em;
+  list-style: none;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.songsPage main>nav ul li a{
+  text-decoration: none;
+  color: var(--font-color);
+  font-family: var(--font-hoofd);
+  font-size: 1.5em;
+}
 
+.songsPage main>nav ul li:first-of-type a{
+  color: var(--accent-color);
+}
 
-
+.songsPage main>nav ul li a:hover{
+  color: var(--accent-color);
+}
 
 
 
@@ -823,153 +1540,206 @@ main.songs-page section>ul li:nth-of-type(8){
       /* ============================*/
       /*=  kleiner scherm commands  =*/
       /* ============================*/
-@media(max-width:65%){
-    /* image cover  */
-header img{
-  width: 65%;
-  margin: 0;
-}
-        /* =============================*/
-        /*=  header section commands   =*/
-        /* =============================*/
-header section{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
-  gap: 2em;
-  padding-top: 3.5em;
-}
 
-/*
- @media(max-width:800px){
-            /* ==========================*/
-          /*=  header section commands  =*/
-          /* ============================*/
+@media(min-width: 940px){
 
-header section div span:nth-of-type(9),
-header section div span:nth-of-type(10){
-  display: none;
-}
-          /* =====================================*/
-          /*=  main sections algemeen commands  =*/
-          /* =====================================*/
-
-    main section:nth-of-type(n+1){
-      padding: 2em;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5em;
-      margin-top: 4em;
-    } 
-
-
-    
-        /* ========================*/
-        /*=  section 2  commands  =*/
-        /* ========================*/
-
-  main section:nth-of-type(2) h3{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    margin: 0;
+    /* =================== */
+    /*=  header commands  =*/
+    /* =================== */
+  .songsPage header section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 66%;
+    gap: 1em;
+    padding-top: 3.5em;
   }
 
-  main section:nth-of-type(2) p:first-of-type{
-    margin-top: -25px;
+  .songsPage header section div{
+    width: 67%;
+    position: relative;
+  }
+
+    /* horizontal lines */
+  .songsPage header section div span:nth-of-type(1){
+  width: 98%;
+  }
+
+  .songsPage header section div span:nth-of-type(2){
+  width: 95%;
+  }
+
+  .songsPage header section div span:nth-of-type(3){
+  width: 100%;
+  }
+
+  .songsPage header section div span:nth-of-type(4){
+  width: 96%;
+  height: .09em;
+  }
+
+  .songsPage header section div span:nth-of-type(5){
+  width: 98%;
+  height: .09em;
+  }
+
+    /* vertical lines */
+  .songsPage header section div span:nth-of-type(6){
+    display: inline;
+    position: absolute;
+    left: 6%;
+  }
+  
+  .songsPage header section div span:nth-of-type(7){
+    display: inline;
+    position: absolute;
+    left: 30%;
+  }
+  
+  .songsPage header section div span:nth-of-type(8){
+    position: absolute;
+    left: 55%;
+  }
+  
+  .songsPage header section div span:nth-of-type(9){
+    position: absolute;
+    left: 80%;
+  }
+
+
+
+
+
+    /* ========================== */
+    /*=  main sections commands  =*/
+    /* ========================== */
+  .songsPage main section:nth-of-type(n+1){
+    display: grid;
+    grid-template-columns: 13% 1fr 1fr 1fr 13%;
+    grid-template-rows: auto;
+    column-gap: 2.5em;
+    margin-top: 4em;
+  }  
+  
+  
+  .songsPage main section h3{
+    font-size: 1.7em;
+  
+    display: flex;
+    justify-content: center;
+  
+    align-self: center;
+    margin-bottom: 2em;
+  }
+
+  .songsPage main section h3::after,
+  .songsPage main section h3::before{
+  content: "";
+  width:35%;
+  height: 2px;
+  background-color: var(--accent-color);
+  top: 50%;
+  }
+
+  .songsPage main section h3::after{
+  margin-left: 1em;
+  position: absolute;
+  right: -.2em;
+
+  transform-origin: left;
+
+  }
+
+  .songsPage main section h3::before{
+  margin-right: 1em;
+
+  position: absolute;
+  left: -.2em;
+
+  transform-origin: right;
+  }
+  
+  .songsPage main section p{
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+  
+      /* navigatie */
+  .songsPage main section nav{
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  
+  .songsPage main section nav ul{
+    width: max-content;
+    display: grid;
+    column-gap: 2.5em;
+  }
+  
+  .songsPage main section nav ul li p{
+    font-size: 1.5em;
+  }
+
+  .songsPage main section nav ul li a img{
+    width: 19em;
+  }
+  
+  .songsPage main section nav ul li:nth-of-type(1){
     grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+  }
+  
+  .songsPage main section nav ul li:nth-of-type(2){
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
-  } 
-
-  main section:nth-of-type(2) p:last-of-type{
-    margin-top: -5px;
-    padding-left: 1.5em;
-
-    border-left: solid var(--accent-color) .1em;
-
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
   }
-
-  main section:nth-of-type(2)>img{
-    width: 100%;
-
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  main section:nth-of-type(2) nav{
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 5;
-    justify-self: center;
-
-    width: 20em;
-
+    
+    
+        /* =============================== */
+        /*=  sections list commands  =*/
+        /* =============================== */
+    
+  .songsPage main section>ul{
     margin: 0;
-    padding: 0;
+    margin-left: 1.5em;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
   }
-
-          /* ========================*/
-          /*=  section 3  commands  =*/
-          /* ========================*/
-
-  main section:nth-of-type(3){
-    padding: 2em;
+  
+   
+  .songsPage main section>ul li{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5em;
-    margin-top: 4em;
-  } 
-
-  main section:nth-of-type(3) h3{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    margin: 0;
   }
 
-  main section:nth-of-type(3) p:first-of-type{
-    margin-top: -25px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-  } 
-
-  main section:nth-of-type(3) p:last-of-type{
-    margin-top: -5px;
-    padding-left: 1.5em;
-
-    border-left: solid var(--accent-color) .1em;
-
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
+  .songsPage main section>ul li p{
+    font-size: 1em;
   }
 
-  main section:nth-of-type(3)>img{
-    width: 100%;
-
+  .songsPage main section>ul li p:first-of-type{
     grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
   }
 
-  main section:nth-of-type(3) nav{
-    grid-column-start: 1;
-    grid-column-end: -1;
+  .songsPage main section>ul li p:last-of-type{
+    grid-column-start: 2;
+  }
+
+  .songsPage main section iframe{
+    width: 75%;
+    height: 420px;
     grid-row-start: 5;
     justify-self: center;
-
-    width: 20em;
-
-    margin: 0;
-    padding: 0;
   }
-
 }

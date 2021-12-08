@@ -1,14 +1,26 @@
+
+:root{
+  --snow-background: white;
+}
+@media (prefers-color-scheme: light){
+:root{
+  --snow-background: black;
+}
+
+}
+
 .snowflake {
     --size: .025em;
     width: var(--size);
     height: var(--size);
-    background: white;
+    background: var(--snow-background);
     border-radius: 50%;
     position: fixed;
     top: -5vh;
     pointer-events: none;
     z-index: -1;
-  }
+}
+
   
   @keyframes snowfall {
     0% {
