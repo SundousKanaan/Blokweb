@@ -57,7 +57,7 @@ html, body {
 
 body{
   background-color: var(--background-color);
-  /* color: var(--font-color); */
+  color: var(--font-color);
 }
 
 a{
