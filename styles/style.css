@@ -30,14 +30,27 @@
   --footer-background-color: #282828;
 
    /* fonts  */
-   /* --font-hoofd:"Roboto Condensed",sans-serif; */
    --font-hoofd:'Black Han Sans', sans-serif;
 
    /* menu button colors  */
    --button-menu-color1: black;
    --button-menu-color2: rgba(255, 255, 255, 0.564);
    --button-background-color: rgba(255, 255, 255, 0.5);
+  }
 
+  /* Social media icons clor veranderen naar zwart */
+  main section:nth-of-type(2)  nav ul li a img,
+  main section:nth-of-type(3)  nav ul li a img{
+  filter: invert(100%);
+  }
+
+  .songsPage main section nav ul li a img{
+    filter:none;
+  }
+
+  /* footer text color naar wit verandren */
+  footer p{
+    color: var(--background-color);
   }
 }
 
@@ -58,6 +71,8 @@ html, body {
 body{
   background-color: var(--background-color);
   color: var(--font-color);
+
+  cursor: default;
 }
 
 a{
@@ -72,13 +87,15 @@ main{
 
     /* to top button */
     /* ============= */
-main>nav button{
+main>nav>a{
   position: fixed;
   right: 8%;
-  bottom: 119px;
+  bottom: 7.4em;
 
-  width: 46px;
-  height: 46px;
+  text-decoration: none;
+
+  width: 2.8em;
+  height: 2.8em;
   padding: 0;
   margin: 0;
   border: solid .01em var(--font-color);
@@ -88,37 +105,34 @@ main>nav button{
 
   cursor: pointer;
 
-  /* opacity: 0; */
-
+  scroll-behavior: smooth;
 }
 
-main>nav button::after{
+main>nav>a::after{
   content: "^";
   margin: 0;
-  font-size: 3em;
+  font-size: 2em;
   color: var(--font-color);
   transform: scaleX(1.5);
 
   position: absolute;
-  top: 7px;
-  bottom: 15px;
-  left: 10px;
-  right: 10px;
+  top: .6em;
+  left: .9em;
 }
 
-main>nav button:hover{
-  box-shadow: 0 0 2px 2px var(--accent-color);
+main>nav>a:hover{
+  box-shadow: 0 0 .1em .1em var(--accent-color);
 }
 
-main>nav button:hover::after{
+main>nav>a:hover::after{
   color: var(--accent-color);
 }
 
-main>nav button:focus{
-  box-shadow: 0 0 2px 2px var(--accent-color);
+main>nav>a:focus{
+  box-shadow: 0 0 .1em .1em var(--accent-color);
 }
 
-main>nav button:focus::after{
+main>nav>a:focus::after{
   color: var(--accent-color);
 }
 
@@ -166,12 +180,12 @@ header h1 a:hover img{
 header h1 a:active img{
   filter: none;
 
-  box-shadow: inset 0 0 3px 22px var(--font-color),
-  0 0 3px 3px var(--font-color);
+  box-shadow: inset 0 0 .2em 1.3em var(--font-color),
+  0 0 .2em .1em var(--font-color);
 }
 
 header h1 a:focus img{
-  border: solid 3px black;
+  outline: none;
   filter: invert(100%) 
   sepia(100%) 
   saturate(0%) 
@@ -181,6 +195,13 @@ header h1 a:focus img{
 }
 
 
+/* Ik heb dit bij de "@media" boven in het bestand geztt, maar hij heeft niet gewerkt.
+Dus heb ik hem naar hier geplaatst */
+@media (prefers-color-scheme: light){
+  header h1 a:focus img{
+    filter:brightness(0%);
+  }
+}
 
 
 
@@ -229,7 +250,7 @@ header button{
 header button span{
 	width: 70%;
 	height: 1px;
-	background-color:white;
+	background-color:var(--font-color);
 	
 	position: absolute;
 
@@ -636,7 +657,9 @@ main section p{
   word-wrap: break-word;
 }
 
-
+main section:nth-of-type(1).Weg{
+  display: none;
+}
 
 
         /* =====================================*/
@@ -887,10 +910,6 @@ main section:nth-of-type(3)  nav ul li a img{
       /*=  kleiner scherm commands  =*/
       /* ============================*/
 
-    /* ipad scherm */
-    /* ============*/
-/* @media(max-width: 768px){ */
-
 @media(max-width: 940px){
     /* =============================*/
     /*=  header algemeen commands  =*/
@@ -923,7 +942,6 @@ main section:nth-of-type(3)  nav ul li a img{
     /* ====================================*/
 
   main section:nth-of-type(n+1){
-    /* padding-left: 1.5em; */
     display: grid;
     grid-template-columns:3% 1fr 1fr 1fr 1fr 3%;
     gap: 1.5em;
@@ -1056,7 +1074,6 @@ main section:nth-of-type(3)  nav ul li a img{
 
   main section:nth-of-type(2) p:last-of-type,
   main section:nth-of-type(3) p:last-of-type{
-    /* margin-top: -20px; */
     grid-column-start: 2;
     grid-column-end: -2;
     grid-row-start: 4;
@@ -1224,6 +1241,9 @@ main section:nth-of-type(3)  nav ul li a img{
   display:none;
 }
 
+
+
+
     /* ================= */
     /*=  main commands  =*/
     /* ================= */
@@ -1306,34 +1326,34 @@ main section:nth-of-type(3)  nav ul li a img{
   grid-column-end: -2;
   grid-row-start: 1;
 
-  margin: 0;
+  margin:0;
 }
 
 .songsPage main section h3::after{
 content: "";
-width:75%;
+right: 0;
+
+width: 75%;
 height: 2px;
 background-color: var(--accent-color);
 top: 50%;
+
+position: absolute;
 }
 
-.songsPage main section h3::after{
-  margin-left: 1em;
-  position: absolute;
-  right: -.2em;
-
-  transform-origin: left;
-
-  }
+.songsPage main section:nth-of-type(1) h3::after{
+  width: 48%;
+}
 
 
-        /* navigatie */
-        /* ========= */
+        /* section navigatie */
+        /* ================= */
 .songsPage main section nav {
   margin: 0;
 
+  width: 100%;
   grid-column-start: 2;
-  grid-column-end: -2;
+  grid-column-end: 4;
   grid-row-start: 2;
 }
 
@@ -1342,12 +1362,15 @@ top: 50%;
   margin: 0;
   padding: 0;
 
-  display: grid;
-  justify-self: center;
-  column-gap: 1em;
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  display: flex;
+  gap: 1em;
 }
 
 .songsPage main section nav ul li{
+  width: 100%;
   margin: 0;
 }
 
@@ -1362,11 +1385,15 @@ top: 50%;
 .songsPage main section nav ul li a{
   position: relative;
   margin: 0;
+
+  display: block;
+  overflow: hidden;
 }
 
 .songsPage main section nav ul li a img{
-  /* width: 100%; */
-  width: 10.5em;
+  width: 100%;
+  display: block;
+  transition: .8s;
 }
 
 
@@ -1375,13 +1402,10 @@ top: 50%;
   filter: none;
 }
 
-
-/* .songsPage main section nav ul li a:hover img{
-  overflow: hidden;
-  transform: scale(1.03);
-  transition: .5s ease;
-} */
-
+.songsPage main section nav ul li a:hover img,
+.songsPage main section nav ul li a:focus img{
+  transform: scale(1.06);
+}
 
 .songsPage main section nav ul li a:active img{
   box-shadow: 
@@ -1389,7 +1413,7 @@ top: 50%;
   0 0 4px 4px var(--accent-color);
 }
 
-.songsPage main section nav ul li a:focus img{
+.songsPage main section nav ul li a:focus{
   box-shadow: 
   0 0 2px 2px var(--font-color),
   0 0 4px 4px var(--accent-color);
@@ -1411,7 +1435,7 @@ top: 50%;
 
   position: absolute;
   right: 0;
-  bottom: 3px;
+  bottom: 0;
 }
  
 
@@ -1429,19 +1453,23 @@ top: 50%;
 
 
 .songsPage main section nav ul li:nth-of-type(1){
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 
 .songsPage main section nav ul li:nth-of-type(2){
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
 } 
 
+
+
+    /* youtube video */
+    /* ============= */
 .songsPage main section iframe{
   grid-column-start: 2;
   grid-column-end: -2;
@@ -1450,10 +1478,14 @@ top: 50%;
 
   width: 100%;
   height: 266px;
-  /* justify-self: center; */
 }
 
+
+    /* info list */
+    /* ========= */
+
 .songsPage main section>ul{
+  margin: 0;
   list-style: none;
   /* width: 13em; */
   padding: 0;
@@ -1468,21 +1500,26 @@ top: 50%;
   grid-template-columns: 1fr 2fr;
   column-gap: 1em;
 
-  line-height: 1em;
 }
 
 .songsPage main section>ul li p:first-of-type{
   grid-column-start: 1;
   grid-column-end: 2;
-
-  line-height: 1.5em;
 }
 
 .songsPage main section>ul li p:last-of-type{
-  border: 0;
-  padding: 0;
   grid-column-start: 2;
   grid-column-end: -1;
+
+  width: max-content;
+
+  text-transform: capitalize;
+}
+
+.songsPage main section:nth-of-type(3) p:last-of-type{
+  font-size: 1em;
+  padding-left: 0;
+  border: none;
 }
 
 .songsPage main>nav{
@@ -1491,9 +1528,16 @@ top: 50%;
   justify-content: center;
 }
 
+.songsPage main section:nth-of-type(2) p:last-of-type,
+.songsPage main section:nth-of-type(3) p:last-of-type {
+  margin-top: 0;
+  grid-row-start: 1;
+}
+
+/* #2 nav 1 2 3 */
 .songsPage main>nav ul{
   padding: 0;
-  margin-top: 15%;
+  margin-top: 19%;
 
   width: 7em;
   list-style: none;
@@ -1512,6 +1556,7 @@ top: 50%;
 
 .songsPage main>nav ul li:first-of-type a{
   color: var(--accent-color);
+  cursor: pointer;
 }
 
 .songsPage main>nav ul li a:hover{
@@ -1537,8 +1582,11 @@ top: 50%;
 
 
 
+
+
+
       /* ============================*/
-      /*=  kleiner scherm commands  =*/
+      /*=  groter scherm commands  =*/
       /* ============================*/
 
 @media(min-width: 940px){
@@ -1615,6 +1663,7 @@ top: 50%;
     /*=  main sections commands  =*/
     /* ========================== */
   .songsPage main section:nth-of-type(n+1){
+    margin-bottom: 25em;
     display: grid;
     grid-template-columns: 13% 1fr 1fr 1fr 13%;
     grid-template-rows: auto;
@@ -1640,6 +1689,10 @@ top: 50%;
   height: 2px;
   background-color: var(--accent-color);
   top: 50%;
+  }
+
+  .songsPage main section:nth-of-type(1) h3::after{
+    width: 35%;
   }
 
   .songsPage main section h3::after{
@@ -1675,29 +1728,35 @@ top: 50%;
   }
   
   .songsPage main section nav ul{
-    width: max-content;
-    display: grid;
-    column-gap: 2.5em;
-  }
+    display: flex;
+    gap: 2.5em;
+  } 
+  
   
   .songsPage main section nav ul li p{
     font-size: 1.5em;
   }
 
+  .songsPage main section nav ul li a{
+    display: block;
+  }
   .songsPage main section nav ul li a img{
-    width: 19em;
+    display: block;
   }
   
   .songsPage main section nav ul li:nth-of-type(1){
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 3;
   }
   
   .songsPage main section nav ul li:nth-of-type(2){
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 3;
+  }
+
+  .songsPage main section:nth-of-type(2) nav,
+  .songsPage main section:nth-of-type(3) nav{
+    width: auto;
   }
     
     
@@ -1707,21 +1766,21 @@ top: 50%;
     
   .songsPage main section>ul{
     margin: 0;
-    margin-left: 1.5em;
+    width: fit-content;
     grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 4;
 
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
+    display: grid;
+    row-gap: 6px;
   }
   
    
   .songsPage main section>ul li{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 53% 1fr;
+
   }
 
   .songsPage main section>ul li p{
@@ -1730,6 +1789,9 @@ top: 50%;
 
   .songsPage main section>ul li p:first-of-type{
     grid-column-start: 1;
+    grid-row-start: 1;
+
+    margin:0;
   }
 
   .songsPage main section>ul li p:last-of-type{

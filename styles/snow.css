@@ -2,6 +2,7 @@
 :root{
   --snow-background: white;
 }
+
 @media (prefers-color-scheme: light){
 :root{
   --snow-background: black;
@@ -31,6 +32,7 @@
         transform: translate3d(var(--left-ini), 0, 0) scale(.25);
     }
   }
+
   .snowflake:nth-child(1) {
     --size: 0.6vw;
     --left-ini: 2vw;
