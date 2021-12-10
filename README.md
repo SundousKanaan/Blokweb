@@ -23,9 +23,11 @@ Rood
  
 #### Je focus:
 Surface plane
-<!-- 1- Dark/Light mode + 2- Custom properties++ (voor meer dan kleur, aanpassen met JS…)
+<!-- 1- Dark/Light mode 
+2- Custom properties++ (voor meer dan kleur, aanpassen met JS…)
 3- Advanced positioning: sticky, fixed, z-index…
-4- Custom themes (bijv. Halloween, kerst…)
+
+4- Custom properties
 5- Scroll animaties (id & scroll-behaviour, intersection observer…)
  -->
  
