@@ -96,21 +96,32 @@ Mijn code is netjes, maar er zijn enkele verbeterpunten nodig, zoals het defini√
 
 ### Agenda voor meeting
 samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
+ 
+student 1:
+ - Beter en duidelijker namen voor de variabele geven (custom properties).
+ - Font sizen
+ - Skip niet de main element in de code dan kan de screen reader niet de elementen
+   van main vinden en gaat hun skippen.
+ - De list elementen moeten gelijk zijn.
+ 
+student 2:
+ - De volgorde van de HTML elementen fixen.
+ - <time>: The (Date) Time element gebruiken.
+ - Ze heeft een probleem met ruimte tussen de foto's, die mag niet zijn.
+ - Het gebruiken van position Property.
+ 
+student 3:
+- Spacing in mijn tekst.
+- Ik heb geprobeerd om grid te gebruiken.
+ 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Heb ik mijn HTML volgorde gefixt
+- <time>: The (Date) Time element gebruiken.
+- Spacing in mijn tekst was een font probleem.
+- Definieer de taal van de site en de tekst met een span  want mijn site gebruikt Engels en Japans.
+- Met de uitleg van de volgende les over de grid wordt duidelijker.
 
 </details>
 
