@@ -189,6 +189,16 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
+ 
+ #### Gebruik screenreader
+ 
+- De screen reader leest alleen de hoofd kopjes en de links iconen maar niet de paragrafen
+- Ik heb de Engelse en Japanse pakketten in mijn systeem opgeslagen, daarna werkte het beter.
+
+
+#### (Visuele) berperkingen
+ 
+- Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, want hij heeft duidelijk bouwen en elementen.
 
 #### Navigeren met toetsenbord
 Mijn navigatie door de toetsenbord werkt goed en je kan wel navegeren tussen de twee pagina's en hun elementen.
@@ -214,16 +224,7 @@ Dit was de eerste test, dus heb ik paar punten gevonden, die ik moet fixen in mi
  - De light mode problemen heb ik in mijn @media gefixt en voor de menu knop ik heb zijn kleur variable gefixt
    - <img src="https://user-images.githubusercontent.com/94317411/145997563-4f8f6a4c-6dba-4e9d-a0f5-4a6d0071150b.png" width="375px" alt="breakdown van de hele pagina">
 
- 
-#### Gebruik screenreader
-Hier korte omschrijving (met indien nodig een afbeelding)
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Visuele berperkingen
-Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, want hij heeft duidelijk bouwen en elementen.
- 
  
 #### Hulp aan de studenten assistent aanvragen:
 - Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders.
