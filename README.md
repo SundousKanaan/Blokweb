@@ -131,7 +131,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Voortgang 2 (week 3)
 
-<details open>
+<details>
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
@@ -184,45 +184,59 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Toegankelijkheidstest (week 4)
 
-<details>
+<details open>
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
+#### Navigeren met toetsenbord
+Mijn navigatie door de toetsenbord werkt goed en je kan wel navegeren tussen de twee pagina's en hun elementen.
+ 
+#### Algemeen punten.
+Dit was de eerste test, dus heb ik paar punten gevonden, die ik moet fixen in mijn css.
+- Mijn Social media hebben niet de kleur die ik wild in de light mode:
+  - <img src="https://user-images.githubusercontent.com/94317411/145995475-512f7681-f7da-4840-b5f6-fc746f7d7b4a.png" width="375px" alt="breakdown van de hele pagina">
+  - <img src="https://user-images.githubusercontent.com/94317411/145995448-90c1991f-648f-413a-bbc3-ac75aad6f385.png" width="375px" alt="breakdown van de hele pagina">
+ 
+- Ik heb de code van de dark mode gefixt
+  - <img src="https://user-images.githubusercontent.com/94317411/145996153-b82ebdcf-85d8-41e0-964f-b946ac14e69b.png" width="375px" alt="breakdown van de hele pagina">
+  - <img src="https://user-images.githubusercontent.com/94317411/145996256-eb75a1fb-ca5c-4d84-94b6-240a67e6afd0.png" width="375px" alt="breakdown van de hele pagina">
+
+- Mijn footer font was zwart in plaats van wit in de light mode
+   - <img src="https://user-images.githubusercontent.com/94317411/145996378-f114d63a-5d13-462a-bb3b-10ed4a558cbb.png" width="375px" alt="breakdown van de hele pagina">
+   - <img src="https://user-images.githubusercontent.com/94317411/145996644-1d6e39c6-d0ca-4000-9414-cb7813933a09.png" width="375px" alt="breakdown van de hele pagina">
+
+ - Mijn menu knop ook was wit in plaats van zwart in de light mode
+   - <img src="https://user-images.githubusercontent.com/94317411/145996958-c7c27c15-7879-44e8-9e75-82d39d1336cb.png" width="375px" alt="breakdown van de hele pagina">
+   - <img src="https://user-images.githubusercontent.com/94317411/145997024-4ad8ec41-c6c7-434a-80c5-7b6512f60d5d.png" width="375px" alt="breakdown van de hele pagina">
+
+ - De light mode problemen heb ik in mijn @media gefixt en voor de menu knop ik heb zijn kleur variable gefixt
+   - <img src="https://user-images.githubusercontent.com/94317411/145997563-4f8f6a4c-6dba-4e9d-a0f5-4a6d0071150b.png" width="375px" alt="breakdown van de hele pagina">
+
+ 
+<!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
+#### Gebruik screenreader
 Hier korte omschrijving (met indien nodig een afbeelding)
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Visuele berperkingen
+Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, want hij heeft duidelijk bouwen en elementen.
  
  
- Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders. Ik heb met de student assistenten oplossen.
-- Section met goede styling:
- <img src="https://user-images.githubusercontent.com/94317411/145980618-d1673bed-a6c6-43d7-b211-4cc9aa92f052.png" width="375px" alt="breakdown van de hele pagina">
+#### Hulp aan de studenten assistent aanvragen:
+- Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders.
+  Ik heb met de student assistenten dat opgelost door de elementen code te verwerken.
+ - Section met goede styling:
+   - <img src="https://user-images.githubusercontent.com/94317411/145980618-d1673bed-a6c6-43d7-b211-4cc9aa92f052.png" width="375px" alt="breakdown van de hele pagina">
 
-- Section met fout styling:
- <img src="https://user-images.githubusercontent.com/94317411/145986245-5b6fb46d-a36c-44f8-83cb-057c42abe412.png" width="375px" alt="breakdown van de hele pagina">
+ - Section met fout styling:
+   - <img src="https://user-images.githubusercontent.com/94317411/145986245-5b6fb46d-a36c-44f8-83cb-057c42abe412.png" width="375px" alt="breakdown van de hele pagina">
 
-- De styling komt hier van de eerste pagina en dat mag niet:
-<img src="https://user-images.githubusercontent.com/94317411/145986326-f3d23373-ca3d-4087-8732-c8f0efabf12b.png" width="375px" alt="breakdown van de hele pagina">
+ - De styling komt hier van de eerste pagina en dat mag niet:
+   - <img src="https://user-images.githubusercontent.com/94317411/145986326-f3d23373-ca3d-4087-8732-c8f0efabf12b.png" width="375px" alt="breakdown van de hele pagina">
 
 
 </details>
