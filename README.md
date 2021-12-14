@@ -255,12 +255,12 @@ Mijn website werkt prima en ik heb wel twee pagina's klaar, dus ik had niet te v
 
 
 ### Agenda voor meeting
-- Tabita:
+Tabita:
  - Haar eerste pagina werkt goed.
  - Ze moet nog haar tweede pagina kiezen, maar de rest van de website pagina's zijn hetzelfde, als de styeling van de home pagina, 
  dus ze moet naar een pagina met andere styeling zoeken.
  
-- Ik:
+Ik:
  - Uitleg aanvragen over de fade effect tijdens scrollen.
  - vraag: Kan ik mijn snow effect divjes in mijn nav ook zitten om daar ook te werken?
  
