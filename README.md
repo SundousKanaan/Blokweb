@@ -247,31 +247,27 @@ Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, 
 
 
 ## Voortgang 3 (week 4)
-<!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
 <details open>
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Mijn website werkt prima en ik heb wel twee pagina's klaar, dus ik had niet te veel vragen over hun.
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
+- Tabita:
+ - Haar eerste pagina werkt goed.
+ - Ze moet nog haar tweede pagina kiezen, maar de rest van de website pagina's zijn hetzelfde, als de styeling van de home pagina, 
+ dus ze moet naar een pagina met andere styeling zoeken.
+ 
+- Ik:
+ - Uitleg aanvragen over de fade effect tijdens scrollen.
+ - vraag: Kan ik mijn snow effect divjes in mijn nav ook zitten om daar ook te werken?
+ 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Alle px naar em veranderen
+- Hoe moet ik mijn animatie tijdens scrollen laten werken
+- Ik kan mijn snow effect divjes in mijn nav ook zitten
 
 </details>
 
@@ -281,16 +277,19 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ <!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
 
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
-
+ 
+ <!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
+ <!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
 </details>
 
 
@@ -300,12 +299,8 @@ hier screenshot(s) van je eindresultaat
 ## Bronnenlijst
 
 <details>
-<summary>continu bijhouden terwijl je werkt</summary>
-
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
-1. bron 1
-2. bron 2
-3. ...
+1. Ik heb een kleuren filter via een youtube video gehaald om mijn images kleur te veranderen
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp
 
 </details>
