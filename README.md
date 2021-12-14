@@ -184,7 +184,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Toegankelijkheidstest (week 4)
 
-<details open>
+<details>
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
@@ -215,7 +215,6 @@ Dit was de eerste test, dus heb ik paar punten gevonden, die ik moet fixen in mi
    - <img src="https://user-images.githubusercontent.com/94317411/145997563-4f8f6a4c-6dba-4e9d-a0f5-4a6d0071150b.png" width="375px" alt="breakdown van de hele pagina">
 
  
-<!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
 #### Gebruik screenreader
 Hier korte omschrijving (met indien nodig een afbeelding)
 
@@ -237,6 +236,8 @@ Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, 
 
  - De styling komt hier van de eerste pagina en dat mag niet:
    - <img src="https://user-images.githubusercontent.com/94317411/145986326-f3d23373-ca3d-4087-8732-c8f0efabf12b.png" width="375px" alt="breakdown van de hele pagina">
+   - Hoe ik dit opgelost heb:
+      - <img src="https://user-images.githubusercontent.com/94317411/146001877-dbd8df77-0914-4726-bd52-bddba3aa44a2.png" width="375px" alt="breakdown van de hele pagina">
 
 
 </details>
@@ -246,8 +247,8 @@ Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, 
 
 
 ## Voortgang 3 (week 4)
-
-<details>
+<!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
+<details open>
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
