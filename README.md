@@ -84,7 +84,7 @@ SONGS / NOVELS
 
 ## Voortgang 1 (week 2)
 
-<details open>
+<details>
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
@@ -131,11 +131,23 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Voortgang 2 (week 3)
 
-<details>
+<details open>
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders.
+- 1- Section met goede styling:
+![image](https://user-images.githubusercontent.com/94317411/145980618-d1673bed-a6c6-43d7-b211-4cc9aa92f052.png)
+ 
+- 2- Section met fout styling:
+ ![image](https://user-images.githubusercontent.com/94317411/145981096-07986d1e-ea0e-40ab-88af-df3e708322f5.png)
+
+- 3- De styling komt hier van de eerste pagina.
+ ![image](https://user-images.githubusercontent.com/94317411/145980980-9f2a89eb-9207-4123-a120-eaa34fb20c94.png)
+
+ 
+
 
 
 ### Agenda voor meeting
