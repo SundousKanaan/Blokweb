@@ -136,15 +136,13 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders.
-- 1- Section met goede styling:
-![image](https://user-images.githubusercontent.com/94317411/145980618-d1673bed-a6c6-43d7-b211-4cc9aa92f052.png)
  
-- 2- Section met fout styling:
- ![image](https://user-images.githubusercontent.com/94317411/145981096-07986d1e-ea0e-40ab-88af-df3e708322f5.png)
-
-- 3- De styling komt hier van de eerste pagina.
- ![image](https://user-images.githubusercontent.com/94317411/145980980-9f2a89eb-9207-4123-a120-eaa34fb20c94.png)
+Alles van de site basis ging goed volgens de lessen van de vorige weken, maar in dit punt heb ik nog twee probleemen
+- Ik heb allen dit screenshot van mijn grid probleem, waar mijn nav elementen staan niet in zijn section grid:
+<img src="https://user-images.githubusercontent.com/94317411/145985365-d6fffb47-f969-442b-be60-e57869f4e0e6.png" width="375px" alt="breakdown van de hele pagina">
+ 
+- Mijn snow effect moet in mijn menu terug komen:
+ <img src="https://user-images.githubusercontent.com/94317411/145986513-8e5dee05-ca9b-4063-8349-d9aaf7b8902b.png" width="375px" alt="breakdown van de hele pagina">
 
  
 
@@ -203,6 +201,18 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 Hier korte omschrijving (met indien nodig een afbeelding)
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+ 
+ 
+ Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders. Ik heb met de student assistenten oplossen.
+- Section met goede styling:
+ <img src="https://user-images.githubusercontent.com/94317411/145980618-d1673bed-a6c6-43d7-b211-4cc9aa92f052.png" width="375px" alt="breakdown van de hele pagina">
+
+- Section met fout styling:
+ <img src="https://user-images.githubusercontent.com/94317411/145986245-5b6fb46d-a36c-44f8-83cb-057c42abe412.png" width="375px" alt="breakdown van de hele pagina">
+
+- De styling komt hier van de eerste pagina en dat mag niet:
+<img src="https://user-images.githubusercontent.com/94317411/145986326-f3d23373-ca3d-4087-8732-c8f0efabf12b.png" width="375px" alt="breakdown van de hele pagina">
+
 
 </details>
 
