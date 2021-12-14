@@ -159,7 +159,7 @@ Tabita:
  - De navigatiemenu elementen verschijnen, zelfs als het menu niet is geopend.
  
  Ik:
- - De snoweffect van de achtergrond in mijn menu ook terug zien.
+ - De snow effect van de achtergrond in mijn menu ook terug zien.
  - Mijn grid van tweede pagina fixen.
  - Een hover/cursor:pointer voor mijn menu knop maken, want het is een drie los lijnen en het is niet duidelijk, 
  als je moet ergens oop de knop klicken of moet dat op de lijnen.
@@ -298,9 +298,16 @@ hier screenshot(s) van je eindresultaat
 
 ## Bronnenlijst
 
-<details>
-1. Ik heb een kleuren filter via een youtube video gehaald om mijn images kleur te veranderen
-  youtube video: https://youtu.be/Ni49a8gZQxY
-  Codepen: https://codepen.io/sosuke/pen/Pjoqqp
+<details open>
+- Ik heb een kleuren filter via een youtube video gehaald om mijn images kleur te veranderen.
+   - Youtube video: https://youtu.be/Ni49a8gZQxY
+   - Codepen: https://codepen.io/sosuke/pen/Pjoqqp
+ 
+- HTML backpijl & nextpijl code:
+   - backpijl: https://unicode-table.com/en/2B9C/
+   - nextpijl: https://unicode-table.com/en/2B9E/
+ 
+- Snow effect animation
+   - Codepen: https://codepen.io/Sundous/pen/mdByqym
 
 </details>
