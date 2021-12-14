@@ -251,7 +251,7 @@ Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, 
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-Mijn website werkt prima en ik heb wel twee pagina's klaar, dus ik had niet te veel vragen over hun.
+Mijn website werkt prima en ik heb wel twee pagina's klaar, dus ik had niet te veel vragen over hem.
 
 
 ### Agenda voor meeting
