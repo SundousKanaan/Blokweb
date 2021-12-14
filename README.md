@@ -299,7 +299,8 @@ hier screenshot(s) van je eindresultaat
 ## Bronnenlijst
 
 <details open>
-- Ik heb een kleuren filter via een youtube video gehaald om mijn images kleur te veranderen.
+ 
+ - Ik heb een kleuren filter via een youtube video gehaald om mijn images kleur te veranderen
    - Youtube video: https://youtu.be/Ni49a8gZQxY
    - Codepen: https://codepen.io/sosuke/pen/Pjoqqp
  
