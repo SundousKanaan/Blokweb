@@ -189,16 +189,6 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
- 
- #### Gebruik screenreader
- 
-- De screen reader leest alleen de hoofd kopjes en de links iconen maar niet de paragrafen
-- Ik heb de Engelse en Japanse pakketten in mijn systeem opgeslagen, daarna werkte het beter.
-
-
-#### (Visuele) berperkingen
- 
-- Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, want hij heeft duidelijk bouwen en elementen.
 
 #### Navigeren met toetsenbord
 Mijn navigatie door de toetsenbord werkt goed en je kan wel navegeren tussen de twee pagina's en hun elementen.
@@ -224,7 +214,16 @@ Dit was de eerste test, dus heb ik paar punten gevonden, die ik moet fixen in mi
  - De light mode problemen heb ik in mijn @media gefixt en voor de menu knop ik heb zijn kleur variable gefixt
    - <img src="https://user-images.githubusercontent.com/94317411/145997563-4f8f6a4c-6dba-4e9d-a0f5-4a6d0071150b.png" width="375px" alt="breakdown van de hele pagina">
 
+ 
+#### Gebruik screenreader
+De screen reader leest alleen de hoofd kopjes en de links iconen maar niet de paragrafen.
 
+ - ik moest te engels en japanse taal pakket
+
+
+#### Visuele berperkingen
+Ik heb mijn website duidelijk gevonden voor mensen met een (visuele) beperking, want hij heeft duidelijk bouwen en elementen.
+ 
  
 #### Hulp aan de studenten assistent aanvragen:
 - Ik heb mijn grid van de tweede pagina gemaakt, maar paar section hebben styling anders.
@@ -282,15 +281,24 @@ Ik:
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
- <!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
-
-### Screenshot(s)
-
-hier screenshot(s) van je eindresultaat
  
- <!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
- <!--  <img src="" width="375px" alt="breakdown van de hele pagina"> -->
+ 
+- Ik ben blij dat mijn alle pagina's werken goed met ook de animaties erbij en de button states (de screenshots heeft geen de snow effect in het achtergrond genomen)
+   - pagina 1
+       - <img src="readme-images/home1.png" width="375px" alt="breakdown van de hele pagina">
+   - navigatie menu:
+       - <img src="https://user-images.githubusercontent.com/94317411/146037340-16208eeb-9d45-4740-a3ff-83914e8f9da8.png" width="375px" alt="breakdown van de hele pagina">
+   - pagina 2 a:
+       - <img src="readme-images/pagina2a.png" width="375px" alt="breakdown van de hele pagina">
+   - pagina 2 b:
+       - <img src="readme-images/pagina2b.png" width="375px" alt="breakdown van de hele pagina">
+
+- Mijn code:
+ 
+   - <img src="https://user-images.githubusercontent.com/94317411/146039385-82895b99-e8fb-477a-8cf6-a334b1be290d.png" width="375px" alt="breakdown van de hele pagina">
+   - <img src="https://user-images.githubusercontent.com/94317411/146039509-a54ec876-1526-4053-9fc0-af096cdf18ed.png" width="375px" alt="breakdown van de hele pagina">
+   - <img src="https://user-images.githubusercontent.com/94317411/146039618-40c92c95-0e24-4392-b0cc-0c64e6b856d8.png" width="375px" alt="breakdown van de hele pagina">
+ 
 </details>
 
 
