@@ -97,20 +97,20 @@ Mijn code is netjes, maar er zijn enkele verbeterpunten nodig, zoals het defini√
 ### Agenda voor meeting
 samen met je groepje opstellen
  
-student 1:
+Marc:
  - Beter en duidelijker namen voor de variabele geven (custom properties).
  - Font sizen
  - Skip niet de main element in de code dan kan de screen reader niet de elementen
    van main vinden en gaat hun skippen.
  - De list elementen moeten gelijk zijn.
  
-student 2:
+Tabita:
  - De volgorde van de HTML elementen fixen.
  - <time>: The (Date) Time element gebruiken.
  - Ze heeft een probleem met ruimte tussen de foto's, die mag niet zijn.
  - Het gebruiken van position Property.
  
-student 3:
+Ik:
 - Spacing in mijn tekst.
 - Ik heb geprobeerd om grid te gebruiken.
  
@@ -149,21 +149,32 @@ Alles van de site basis ging goed volgens de lessen van de vorige weken, maar in
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
+Marc:
+ - Zijn pagina was klein en weinig werk voor wat hij kan doen, dus het advies was om misschien kan hij animaties voor de achtergrond maken, 
+ die in de orginiele site niet staat.
+ - Zijn font responsive maken tijdens het veranderen van de screen width bijvoorbeeld met clamp().
+ 
+Tabita:
+ - Haar foto's size aanpassen.
+ - De navigatiemenu elementen verschijnen, zelfs als het menu niet is geopend.
+ 
+ Ik:
+ - De snoweffect van de achtergrond in mijn menu ook terug zien.
+ - Mijn grid van tweede pagina fixen.
+ - Een hover/cursor:pointer voor mijn menu knop maken, want het is een drie los lijnen en het is niet duidelijk, 
+ als je moet ergens oop de knop klicken of moet dat op de lijnen.
+ - Ik heb met de browser scherm beginnen, maar dat is fout, want ik moet met mobile scherm beginnen en nu ben ik klaar met de eerste pagina, 
+ mijn menu en bijna de helft van de tweede, dus moet ik Sanna vraggen wat ik nu moet doen.
+ 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
- - Ik had een probleem met de grid van pagina 2, maar het hulp van de student assisstenten had ik duidelijker beeld over de grid en hoe kan ik mijn probleem fixen.
+- Ik had een probleem met de grid van pagina 2, maar het hulp van de student assisstenten had ik duidelijker beeld over de grid en hoe kan ik mijn probleem fixen.
+ Als ik wil elementen in mijn grid positioneren die een parent hebben, moet ik eerste de parent in de grid positineren en dan zijn childeren positineren.
+ 
 - Mijn achtergrond animatie is prima maar het moet ook in mijn navigatie menu komen, ze hebben ook geprobeerd om het te fixen en uitleggen hoe kan dat.
-
+ 
+- Ik kan mijn code van de eerste pagina houden, en begin opniew met de mobile versie van de tweede pagina.
 
 </details>
 
