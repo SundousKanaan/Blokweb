@@ -1,6 +1,6 @@
-
 :root{
   --snow-background: white;
+  --size: .025em;
 }
 
 @media (prefers-color-scheme: light){
@@ -11,7 +11,6 @@
 }
 
 .snowflake {
-    --size: .025em;
     width: var(--size);
     height: var(--size);
     background: var(--snow-background);
@@ -203,8 +202,6 @@
     animation: snowfall 17s linear infinite;
     animation-delay: -120s;
   }
-
-  /*   
   .snowflake:nth-child(20) {
     --size: 0.4vw;
     --left-ini: 4vw;
@@ -482,4 +479,4 @@
     left: 84vw;
     animation: snowfall 17s linear infinite;
     animation-delay: -17s;
-  } */
+  }

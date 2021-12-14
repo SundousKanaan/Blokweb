@@ -1,6 +1,6 @@
-        /* ========================*/
-        /*= met custom properties =*/
-        /* ========================*/
+      /* ========================*/
+      /*= met custom properties =*/
+      /* ========================*/
 :root{
   /* kleuren */
   --accent-color: #ff2c60;
@@ -10,7 +10,6 @@
   --footer-background-color: #282828;
 
    /* fonts  */
-   /* --font-hoofd:"Roboto Condensed",sans-serif; */
    --font-hoofd:'Black Han Sans', sans-serif;
 
    /* menu button colors  */
@@ -38,10 +37,18 @@
    --button-background-color: rgba(255, 255, 255, 0.5);
   }
 
-  /* Social media icons clor veranderen naar zwart */
+  header nav ul li{
+    background-color: rgba(255, 255, 255, 0.843);
+  }
+
+  header nav ul:last-of-type li a img{
+    filter: brightness(0);
+  }
+
+  /* Social media icons color veranderen naar zwart */
   main section:nth-of-type(2)  nav ul li a img,
   main section:nth-of-type(3)  nav ul li a img{
-  filter: invert(100%);
+  filter: brightness(0);
   }
 
   .songsPage main section nav ul li a img{
@@ -54,6 +61,189 @@
   }
 }
 
+    /* ================== */
+    /* algemeen animaties */
+    /* ================== */
+    @keyframes afterline{
+      from{
+        transform:scalex(0);
+      }
+      to{
+        transform:scalex(1);
+      }
+    }
+    
+    @keyframes beforeline{
+      from{
+        transform:scalex(0);
+      }
+      to{
+        transform:scalex(1);
+      }
+    }
+    
+    @keyframes lampeffect{
+      0%{
+        opacity: 0;
+      }
+      25%{
+        opacity: 1;
+      }
+      50%{
+        opacity: .5;
+      }
+      75%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+    
+    header>img{
+      animation-name: lampeffect;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-delay: .7s;
+      animation-fill-mode: both;
+    
+      animation-timing-function: linear;
+    }
+    
+    header section h2{
+      animation-name: lampeffect;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-delay: .5s;
+      animation-fill-mode: both;
+    
+      animation-timing-function: linear;
+    }
+    
+    header section div span:nth-of-type(2n){
+      animation-name: lampeffect;
+      animation-duration: .7s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+    
+      animation-timing-function: linear;
+    }
+    
+    header section div span:nth-of-type(2n+1){
+      animation-name: lampeffect;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear h3,
+    section.appear p{
+      animation-name: lampeffect;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear img{
+      animation-name: lampeffect;
+      animation-duration: .6s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear h3::after{
+      animation: afterline;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    
+      transform-origin: left;
+    }
+    
+    section.appear h3::before{
+      animation: beforeline;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      transform-origin: right;
+    }
+    
+    section.appear nav ul li:nth-of-type(1){
+      animation-name: lampeffect;
+      animation-duration: .3s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear nav ul li:nth-of-type(3){
+      animation-name: lampeffect;
+      animation-duration: .4s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear nav ul li:nth-of-type(3){
+      animation-name: lampeffect;
+      animation-duration: .2s;
+      animation-iteration-count: 1;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear>ul{
+      animation-name: lampeffect;
+      animation-duration: .1s;
+      animation-iteration-count: 4;
+      animation-delay: .5s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    section.appear iframe{
+      animation-name: lampeffect;
+      animation-duration: .4s;
+      animation-iteration-count: 1;
+      animation-delay: .2s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+      /* navigatie animatie */
+    nav.toonMenu ul li:nth-of-type(2n) a{
+      animation-name: lampeffect;
+      animation-duration: .2s;
+      animation-iteration-count: 1;
+      animation-delay: .5s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    nav.toonMenu ul li:nth-of-type(2n+1) a{
+      animation-name: lampeffect;
+      animation-duration: .2s;
+      animation-iteration-count: 1;
+      animation-delay: .3s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    
+    
 
 
 
@@ -94,8 +284,8 @@ main>nav>a{
 
   text-decoration: none;
 
-  width: 2.8em;
-  height: 2.8em;
+  width: 2em;
+  height: 2em;
   padding: 0;
   margin: 0;
   border: solid .01em var(--font-color);
@@ -104,20 +294,20 @@ main>nav>a{
   outline: none;
 
   cursor: pointer;
-
   scroll-behavior: smooth;
 }
 
 main>nav>a::after{
   content: "^";
+  display: block;
   margin: 0;
   font-size: 2em;
   color: var(--font-color);
-  transform: scaleX(1.5);
+  transform: scaleX(1.2);
 
   position: absolute;
-  top: .6em;
-  left: .9em;
+  top: 10%;
+  left: 25%;
 }
 
 main>nav>a:hover{
@@ -135,10 +325,6 @@ main>nav>a:focus{
 main>nav>a:focus::after{
   color: var(--accent-color);
 }
-
-
-
-
 
 
         /* ===============================*/
@@ -169,6 +355,7 @@ header h1 a img{
 }
 
 header h1 a:hover img{
+  /* white color */
   filter: invert(100%) 
   sepia(100%) 
   saturate(0%) 
@@ -185,7 +372,10 @@ header h1 a:active img{
 }
 
 header h1 a:focus img{
-  outline: none;
+  outline-style: solid;
+  outline-color: var(--accent-color);
+
+  /* white color */
   filter: invert(100%) 
   sepia(100%) 
   saturate(0%) 
@@ -195,7 +385,8 @@ header h1 a:focus img{
 }
 
 
-/* Ik heb dit bij de "@media" boven in het bestand geztt, maar hij heeft niet gewerkt.
+/* Ik heb dit bij de "@media" boven in het bestand geztt,
+maar hij heeft niet gewerkt.
 Dus heb ik hem naar hier geplaatst */
 @media (prefers-color-scheme: light){
   header h1 a:focus img{
@@ -203,15 +394,13 @@ Dus heb ik hem naar hier geplaatst */
   }
 }
 
-
-
-
     /* image cover  */
-header img{
+header>img{
   width: 66%;
   margin: 0;
 
   transition: .5s;
+  opacity: 0;
 }
 
 
@@ -230,10 +419,10 @@ header button{
 
   position: fixed;
   right: 2%;
-  top: 1%;
+  top: 1.5%;
 
-  height: 3em;
-  width: 3em; 
+  height: 2em;
+  width: 2em; 
 
   padding: 0;
 
@@ -248,8 +437,8 @@ header button{
 }
 
 header button span{
-	width: 70%;
-	height: 1px;
+	width: 100%;
+  height: .1em;
 	background-color:var(--font-color);
 	
 	position: absolute;
@@ -258,11 +447,11 @@ header button span{
 }
 
 header button span:nth-of-type(1) {
-	transform:translatey(-10px);
+  transform:translatey(-.6em);
 }
 
 header button span:nth-of-type(3) {
-	transform:translatey(10px);
+	transform:translatey(.6em);
 }
 
 header button.veranderen span:nth-of-type(1) {
@@ -284,13 +473,15 @@ header button:hover span{
 }
 
 header button:active span{
-  filter: drop-shadow(0 0 2px var(--accent-color) );
-  background-color: white;
+  filter: drop-shadow(0 0 .1em var(--font-color) );
+  background-color: var(--accent-color);
   transition: .1s;
 }
 
-header button:focus span{
-  border: solid 2px var(--accent-color);
+
+header button:focus{
+  outline-color: var(--accent-color);
+  outline-style: solid;
 }
 
 
@@ -299,7 +490,7 @@ header button:focus span{
     /* ============== */
 
 header nav{
-  padding: 70px 15% ;
+  padding: 4em 15% ;
   margin: 0;
 
   position: fixed;
@@ -308,8 +499,6 @@ header nav{
   right: 0;
   bottom: 0;
   z-index: 100;
-
-  margin: 0;
 
   background-image: url(../images/logo_yoasobi_menu.png);
   background-repeat: no-repeat;
@@ -324,7 +513,7 @@ header nav>p{
   font-family: var(--font-hoofd);
   margin: 0;
   position: absolute;
-  bottom: 7px;
+  bottom: .5em;
 
   left: 18%;
   pointer-events: none;
@@ -346,6 +535,8 @@ header nav ul:first-of-type{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  overflow-x: hidden;
 }
 
 header nav ul:first-of-type li a{
@@ -367,7 +558,7 @@ header nav ul li a:hover{
 }
 
 header nav ul li a::after{
-  filter: drop-shadow(0 0 3px var(--accent-color));
+  filter: drop-shadow(0 0 .1em var(--accent-color));
   color: var(--font-color);
   transform: scaleX(1);
 }
@@ -385,14 +576,13 @@ header nav ul:first-of-type li a::after{
   width: 20em;
   height: .08em;
 
-  transform-origin: left center;
+  transform-origin: left;
   transform: scaleX(0);
   transition:.3s;
-
 }
 
 header nav ul li a:active{
-  filter: drop-shadow(0 0 3px var(--accent-color));
+  filter: drop-shadow(0 0 .2em var(--accent-color));
   color: var(--font-color);
   transition: 1s;
 }
@@ -409,7 +599,7 @@ header nav ul:first-of-type li a:hover::after {
 }
 
 header nav ul li a:visited{
-  filter: drop-shadow(0 0 2px var(--font-color) );
+  filter: drop-shadow(0 0 .1em var(--font-color) );
 }
 
 header nav ul li a:visited::after{
@@ -419,7 +609,6 @@ header nav ul li a:visited::after{
 
 header nav ul li a:focus{
   color: var(--accent-color);
-  /* filter: drop-shadow(0 0 2px var(--accent-color) ); */
 }
 
 header nav ul li a:focus::after{
@@ -428,29 +617,57 @@ header nav ul li a:focus::after{
   transform: scaleX(1);
 }
 
+
+header nav ul li a:focus::before{
+  content: "•";
+  font-family: inherit;
+  color: var(--accent-color);
+
+  position: absolute;
+  left: -.5em;
+}
+
+
     /* list 2 social media icons */
 
 header nav ul:last-of-type{
   width: 18em;
   display: flex;
   justify-content: space-between;
-align-items: center;
-}
-
-header nav ul:last-of-type li a{
-  outline: none;
+  align-items: center;
 }
 
 header nav ul:last-of-type li a img{
+  display: block;
   width: 4em;
   margin: 0;
 }
 
-header nav ul:last-of-type li a:hover{
+header nav ul:last-of-type li a:hover img{
   /* Ik heb dit filter via een youtube video gehaald
   youtube video: https://youtu.be/Ni49a8gZQxY
   Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
   niet vragen alsjeblieft */
+
+   /* red color */
+  filter: 
+  invert(63%) 
+  sepia(59%) 
+  saturate(5108%) 
+  hue-rotate(329deg) 
+  brightness(101%) 
+  contrast(101%);
+
+  outline-style: solid;
+}
+
+header nav ul:last-of-type li a:focus img{
+  /* Ik heb dit filter via een youtube video gehaald
+  youtube video: https://youtu.be/Ni49a8gZQxY
+  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
+  niet vragen alsjeblieft */
+
+   /* red color */
   filter: 
   invert(63%) 
   sepia(59%) 
@@ -460,25 +677,13 @@ header nav ul:last-of-type li a:hover{
   contrast(101%);
 }
 
-header nav ul:last-of-type li a:focus{
+header nav ul:last-of-type li a:active img{
   /* Ik heb dit filter via een youtube video gehaald
   youtube video: https://youtu.be/Ni49a8gZQxY
   Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
   niet vragen alsjeblieft */
-  filter: 
-  invert(63%) 
-  sepia(59%) 
-  saturate(5108%) 
-  hue-rotate(329deg) 
-  brightness(101%) 
-  contrast(101%);
-}
 
-header nav ul:last-of-type li a:visited{
-  /* Ik heb dit filter via een youtube video gehaald
-  youtube video: https://youtu.be/Ni49a8gZQxY
-  Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
-  niet vragen alsjeblieft */
+   /* red color */
   filter: 
   invert(63%) 
   sepia(59%) 
@@ -486,6 +691,8 @@ header nav ul:last-of-type li a:visited{
   hue-rotate(329deg) 
   brightness(101%) 
   contrast(101%);
+
+  transform: scale(.8);
 }
 
 
@@ -650,8 +857,6 @@ main section p{
   font-family: var(--font-hoofd);
   font-size: 1em;
 
-  letter-spacing: 1px;
-
   margin: 0;
   line-height: 1.75;
   word-wrap: break-word;
@@ -670,13 +875,16 @@ main section:nth-of-type(n+1){
   display: grid;
   grid-template-columns: 19% 1fr 1fr 1fr 1fr  19%;
   column-gap: 1.3em;
-  margin-top: 4em;
+  margin-top: 10%;
+  margin-bottom: 10%;
 } 
 
 main section p{
   font-size: 1em;
   line-height: 1.6em;
 }
+
+
 
 
 
@@ -752,7 +960,7 @@ main section:nth-of-type(2) nav{
   margin-left: 20%;
 }
 
-main section:nth-of-type(2)  nav ul{
+main section:nth-of-type(2) nav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -763,18 +971,16 @@ main section:nth-of-type(2)  nav ul{
 }
 
 main section:nth-of-type(2)  nav ul li a img{
-  width: 30px;
+  width: 2em;
 }
 
-main section nav ul li a{
-  outline: none;
-}
-
-main section nav ul li a:focus{
+main section nav ul li a:focus img{
   /* Ik heb dit filter via een youtube video gehaald
   youtube video: https://youtu.be/Ni49a8gZQxY
   Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
   niet vragen alsjeblieft */
+
+   /* red color */
   filter: 
   invert(63%) 
   sepia(59%) 
@@ -784,11 +990,13 @@ main section nav ul li a:focus{
   contrast(101%);
 }
 
-main section nav ul li a:hover{
+main section nav ul li a:hover img{
   /* Ik heb dit filter via een youtube video gehaald
   youtube video: https://youtu.be/Ni49a8gZQxY
   Codepen: https://codepen.io/sosuke/pen/Pjoqqp 
   niet vragen alsjeblieft */
+
+  /* red color */
   filter: 
   invert(63%) 
   sepia(59%) 
@@ -798,12 +1006,14 @@ main section nav ul li a:hover{
   contrast(101%);
 }
 
-main section nav ul li a:visited{
-  filter: drop-shadow(0 0 5px var(--accent-color) );
+main section nav ul li a:visited img{
+  filter: drop-shadow(0 0 .3em var(--accent-color) );
+  transform: scale(.9);
 }
 
-main section nav ul li a:active{
-  filter: drop-shadow(0 0 5px var(--accent-color) );
+main section nav ul li a:active img{
+  filter: drop-shadow(0 0 .3em var(--accent-color) );
+  transform: scale(.9);
 }
 
 
@@ -858,7 +1068,7 @@ main section:nth-of-type(3) nav{
   margin-left: 20%;
 }
 
-main section:nth-of-type(3)  nav ul{
+main section:nth-of-type(3) nav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -868,8 +1078,8 @@ main section:nth-of-type(3)  nav ul{
   padding: 0;
 }
 
-main section:nth-of-type(3)  nav ul li a img{
-  width: 30px;
+main section:nth-of-type(3) nav ul li a img{
+  width: 2em;
 }
 
 
@@ -906,14 +1116,18 @@ main section:nth-of-type(3)  nav ul li a img{
 
 
 
-      /* ============================*/
-      /*=  kleiner scherm commands  =*/
-      /* ============================*/
+      /* =================================*/
+      /*=  home kleiner scherm commands  =*/
+      /* =================================*/
 
-@media(max-width: 940px){
-    /* =============================*/
-    /*=  header algemeen commands  =*/
-    /* =============================*/
+
+      /* ipad scherm */
+      /* ============*/
+@media(max-width: 59em){
+
+    /* =================================*/
+    /*= home header algemeen commands  =*/
+    /* =================================*/
   header h1 a img{
     width: 25%;
   }
@@ -921,25 +1135,28 @@ main section:nth-of-type(3)  nav ul li a img{
   header img{
     width: 100%;
     margin: 0;
-
-    transition: .5s;
   }
 
   header section{
     width: 100%;
+    transition: .5s;
   }
-    /* ============================*/
-    /*=  header section commands  =*/
-    /* ============================*/
+
+
+    /* ================================*/
+    /*= home header section commands  =*/
+    /* ================================*/
 
   header section div span:nth-of-type(9),
   header section div span:nth-of-type(10){
     display: none;
     padding: 0 5%;
   }
-    /* ====================================*/
-    /*=  main sections algemeen commands  =*/
-    /* ====================================*/
+
+
+    /* =========================================*/
+    /*=  home main sections algemeen commands  =*/
+    /* =========================================*/
 
   main section:nth-of-type(n+1){
     display: grid;
@@ -948,26 +1165,26 @@ main section:nth-of-type(3)  nav ul li a img{
     margin-top: 4em;
   } 
 
-    /* =================================*/
-    /*=  main sections 2 + 3 commands  =*/
-    /* =================================*/
+    /* =====================================*/
+    /*= home main sections 2 + 3 commands  =*/
+    /* =====================================*/
   main section:nth-of-type(2) p:first-of-type,
   main section:nth-of-type(3) p:first-of-type{
-    margin-top: -25px;
+    margin-top: -1.5em;
 
     font-size: .75em;
   } 
    
   main section:nth-of-type(2) p:last-of-type,
   main section:nth-of-type(3) p:last-of-type{
-    margin-top: -20px;
+    margin-top: -1.5em;
   } 
 }
   
 
       /* iphone 6/7/8 plus scherm */
       /* =========================*/
-@media(max-width: 414.4px){
+@media(max-width: 26em){
 
   /* =============================*/
   /*=  header algemeen commands  =*/
@@ -1059,12 +1276,12 @@ main section:nth-of-type(3)  nav ul li a img{
     grid-column-end: 3;
     grid-row-start: 2;
     margin: 0;
-    margin-bottom: 6px;
+    margin-bottom: .3em;
   }
 
   main section:nth-of-type(2) p:first-of-type,
   main section:nth-of-type(3) p:first-of-type{
-    margin-top: -25px;
+    margin-top: -1.5em;
     grid-column-start: 2;
     grid-column-end: -2;
     grid-row-start: 3;
@@ -1197,9 +1414,10 @@ main section:nth-of-type(3)  nav ul li a img{
 
 
 
-
+    /* ******************************** */
     /* ******************************** */
     /*=  Songs / Novels page commands  =*/
+    /* ******************************** */
     /* ******************************** */
 
 
@@ -1248,7 +1466,7 @@ main section:nth-of-type(3)  nav ul li a img{
     /*=  main commands  =*/
     /* ================= */
 
-    /* taal navigatie */
+    /* Taal navigatie */
     /* ============== */
 .songsPage main>nav:first-child{
   margin: 0;
@@ -1265,9 +1483,11 @@ main section:nth-of-type(3)  nav ul li a img{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
+  gap: 3em;
 
   padding: 0;
+
+  position: relative;
 }
 
 .songsPage main>nav:first-child ul li:nth-of-type(1) a{
@@ -1278,13 +1498,17 @@ main section:nth-of-type(3)  nav ul li a img{
   margin: 0;
 }
 
-.songsPage main>nav:first-child ul li:nth-of-type(2) p{
+.songsPage main>nav:first-child ul li:first-of-type:after{
+  content: "|";
+  transform: scaleY(2);
   color: var(--font-color);
-  font-size: 2em;
-  margin: 0;
+
+
+  position: absolute;
+  right: 56%;
 }
 
-.songsPage main>nav:first-child ul li:nth-of-type(3) a{
+.songsPage main>nav:first-child ul li:last-of-type a{
   color: var(--accent-color);
   font-weight: bold;
 }
@@ -1297,11 +1521,22 @@ main section:nth-of-type(3)  nav ul li a img{
   color: var(--accent-color);
 }
 
+.songsPage main>nav:first-child ul li a:hover{
+  color: var(--accent-color);
+}
+
 .songsPage main>nav:first-child ul li a:focus{
   color: var(--font-color);
-  box-shadow: 
-  0 0 2px 2px var(--font-color),
-  0 0 4px 4px var(--accent-color);
+  box-shadow: 0 0 .1em .1em var(--accent-color);
+}
+
+.songsPage main>nav:first-child ul li a:active{
+  text-decoration: underline;
+}
+
+.songsPage main section nav ul li a:hover img,
+.songsPage main section nav ul li a:focus img {
+  filter: none;
 }
 
 
@@ -1327,27 +1562,36 @@ main section:nth-of-type(3)  nav ul li a img{
   grid-row-start: 1;
 
   margin:0;
+
+  overflow-x: hidden;
 }
 
 .songsPage main section h3::after{
 content: "";
-right: 0;
 
 width: 75%;
-height: 2px;
+height: .1em;
 background-color: var(--accent-color);
-top: 50%;
 
 position: absolute;
+top: 50%;
+right: 0;
+
+z-index: -1;
+transform:scalex(0);
 }
 
 .songsPage main section:nth-of-type(1) h3::after{
   width: 48%;
 }
 
+.songsPage main .afterLine::after{
+  width: 55%;
+}
 
-        /* section navigatie */
-        /* ================= */
+
+        /* section navigatie (images) */
+        /* ========================== */
 .songsPage main section nav {
   margin: 0;
 
@@ -1409,14 +1653,14 @@ position: absolute;
 
 .songsPage main section nav ul li a:active img{
   box-shadow: 
-  0 0 2px 2px var(--font-color),
-  0 0 4px 4px var(--accent-color);
+  0 0 .1em .1em var(--font-color),
+  0 0 .2em .2em var(--accent-color);
 }
 
 .songsPage main section nav ul li a:focus{
   box-shadow: 
-  0 0 2px 2px var(--font-color),
-  0 0 4px 4px var(--accent-color);
+  0 0 .1em .1em var(--font-color),
+  0 0 .2em .2em var(--accent-color);
 }
 
 .songsPage main section nav ul li a span{
@@ -1429,7 +1673,7 @@ position: absolute;
   justify-content: center;
   text-align: center;
   margin: 0;
-  padding-top: 8px;
+  padding-top: .5em;
   font-size: 1.5em;
   font-weight: bolder;
 
@@ -1477,7 +1721,9 @@ position: absolute;
   grid-row-end: 4;
 
   width: 100%;
-  height: 266px;
+  height: 17em;
+
+  border: none;
 }
 
 
@@ -1487,8 +1733,8 @@ position: absolute;
 .songsPage main section>ul{
   margin: 0;
   list-style: none;
-  /* width: 13em; */
   padding: 0;
+
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 4;
@@ -1499,7 +1745,6 @@ position: absolute;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 1em;
-
 }
 
 .songsPage main section>ul li p:first-of-type{
@@ -1507,19 +1752,20 @@ position: absolute;
   grid-column-end: 2;
 }
 
+
 .songsPage main section>ul li p:last-of-type{
   grid-column-start: 2;
   grid-column-end: -1;
 
-  width: max-content;
-
   text-transform: capitalize;
+
+  inline-size: 100%;
+  overflow-wrap: break-word;
 }
 
-.songsPage main section:nth-of-type(3) p:last-of-type{
-  font-size: 1em;
-  padding-left: 0;
-  border: none;
+.songsPage main section>ul li p:last-of-type::before{
+  content: ":";
+  color: var(--font-color);
 }
 
 .songsPage main>nav{
@@ -1528,16 +1774,22 @@ position: absolute;
   justify-content: center;
 }
 
-.songsPage main section:nth-of-type(2) p:last-of-type,
-.songsPage main section:nth-of-type(3) p:last-of-type {
+.songsPage main section:nth-of-type(2) p,
+.songsPage main section:nth-of-type(3) p{
   margin-top: 0;
+  margin-bottom: 0;
   grid-row-start: 1;
 }
 
-/* #2 nav 1 2 3 */
+.songsPage section:nth-of-type(3) p:last-of-type{
+  border:none;
+  padding: 0;
+}
+
+      /* #2 nav 1 2 3 */
 .songsPage main>nav ul{
   padding: 0;
-  margin-top: 19%;
+  margin-top: 5%;
 
   width: 7em;
   list-style: none;
@@ -1551,18 +1803,21 @@ position: absolute;
   text-decoration: none;
   color: var(--font-color);
   font-family: var(--font-hoofd);
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
-
-.songsPage main>nav ul li:first-of-type a{
-  color: var(--accent-color);
-  cursor: pointer;
-}
-
 .songsPage main>nav ul li a:hover{
   color: var(--accent-color);
 }
 
+.songsPage main>nav ul li a:active{
+  font-size: 1em;
+}
+.songsPage main>nav ul li a.active{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
 
 
 
@@ -1585,11 +1840,49 @@ position: absolute;
 
 
 
-      /* ============================*/
-      /*=  groter scherm commands  =*/
-      /* ============================*/
 
-@media(min-width: 940px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* ==========================================*/
+      /*=  songsandnovels groter scherm commands  =*/
+      /* ==========================================*/
+
+@media(min-width: 48em){
 
     /* =================== */
     /*=  header commands  =*/
@@ -1597,15 +1890,18 @@ position: absolute;
   .songsPage header section{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: relative;
     width: 66%;
     gap: 1em;
     padding-top: 3.5em;
   }
+  .songsPage header section h2{
+    font-size: 2em;
+  }
 
   .songsPage header section div{
-    width: 67%;
+    width: 60%;
     position: relative;
   }
 
@@ -1680,37 +1976,33 @@ position: absolute;
   
     align-self: center;
     margin-bottom: 2em;
+
+    overflow: hidden;
   }
 
   .songsPage main section h3::after,
   .songsPage main section h3::before{
   content: "";
   width:35%;
-  height: 2px;
+  height: .1em;
   background-color: var(--accent-color);
   top: 50%;
   }
 
+  .songsPage main .afterLine::after,
   .songsPage main section:nth-of-type(1) h3::after{
     width: 35%;
   }
 
   .songsPage main section h3::after{
-  margin-left: 1em;
   position: absolute;
   right: -.2em;
-
-  transform-origin: left;
-
   }
 
   .songsPage main section h3::before{
-  margin-right: 1em;
-
   position: absolute;
   left: -.2em;
-
-  transform-origin: right;
+  transform: scaleX(0);
   }
   
   .songsPage main section p{
@@ -1719,6 +2011,7 @@ position: absolute;
   }
   
       /* navigatie */
+      /* ========= */
   .songsPage main section nav{
     margin: 0;
     grid-column-start: 2;
@@ -1740,6 +2033,7 @@ position: absolute;
   .songsPage main section nav ul li a{
     display: block;
   }
+
   .songsPage main section nav ul li a img{
     display: block;
   }
@@ -1761,25 +2055,23 @@ position: absolute;
     
     
         /* =============================== */
-        /*=  sections list commands  =*/
+        /*=  sections info list commands  =*/
         /* =============================== */
     
   .songsPage main section>ul{
     margin: 0;
-    width: fit-content;
+    width: 100%;
     grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
-
-    display: grid;
-    row-gap: 6px;
+    row-gap: .3em;
   }
   
    
   .songsPage main section>ul li{
     display: grid;
-    grid-template-columns: 53% 1fr;
+    grid-template-columns: 45% 55%;
 
   }
 
@@ -1796,11 +2088,15 @@ position: absolute;
 
   .songsPage main section>ul li p:last-of-type{
     grid-column-start: 2;
+    grid-column-end: 3;
+
+    inline-size: 100%;
+    overflow-wrap: break-word;
   }
 
   .songsPage main section iframe{
     width: 75%;
-    height: 420px;
+    height: 26em;
     grid-row-start: 5;
     justify-self: center;
   }
