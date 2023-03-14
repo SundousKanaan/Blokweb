@@ -1,6 +1,11 @@
       /* ========================*/
       /*= met custom properties =*/
       /* ========================*/
+
+html{
+	overflow:hidden;
+}
+
 :root{
   /* kleuren */
   --accent-color: #ff2c60;
